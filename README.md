@@ -1,1 +1,2 @@
-i fucking hate github auth man
+My nixos config repo (work in progress)
+

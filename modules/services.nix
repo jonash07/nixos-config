@@ -15,6 +15,8 @@
 
   services.devmon.enable = true;
 
+  services.openssh.enable = true;
+
   services.samba = {
     enable = true;
     openFirewall = true;
