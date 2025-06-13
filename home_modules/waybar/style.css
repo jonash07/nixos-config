@@ -1,0 +1,86 @@
+* {
+    border: none;
+    font-family: Mononoki Nerd Font;
+    font-size: 20px;
+
+}
+
+window#waybar {
+    background-color: transparent;
+
+}
+
+window#waybar > box {
+    background-color: rgba(128, 128, 128, 0.5);
+    border-radius: 18px;
+    margin: 10px 10px 0 10px;
+
+}
+
+#custom-logo,
+#cpu,
+#memory,
+#workspaces,
+#tray,
+#pulseaudio-slider,
+#bluetooth,
+#network,
+#clock,
+#custom-power
+{
+    background-color: rgba(169, 169, 169, 0.5);
+    margin: 5px 5px 5px 5px;
+    padding: 0px 4px 0px 4px;
+    border-radius: 14px;
+    color: white;
+
+}
+
+#workspaces {
+    padding: 0 0 0 0;
+
+}
+
+#workspaces button {
+    background-color: rgba(169, 169, 169, 0.5);
+    margin: 3px 3px 3px 3px;
+    padding: 0 7px 0 7px;
+    border-radius: 12px;
+    color: white;
+
+}
+
+#pulseaudio-slider {
+    min-height: 20px;
+    min-width: 128px;
+
+}
+
+#pulseaudio-slider slider {
+    min-height: 0px;
+    min-width: 0px;
+
+}
+
+#pulseaudio-slider through {
+    min-height: 16px;
+    min-width: 100px;
+
+}
+
+#pulseaudio-slider highlight {
+    background-color: rgba(64, 64, 64, 0.5);
+    min-width: 4px;
+
+}
+
+#custom-logo {
+    padding: 2px 4px 2px 7px;
+
+}
+
+#custom-power {
+    padding: 2px 2px 2px 9px;
+
+}
+
