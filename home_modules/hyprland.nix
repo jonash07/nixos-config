@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ ... }:
 
 let
   wallpaper-path = ./halo-wp-4k.gif;
