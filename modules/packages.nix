@@ -34,5 +34,6 @@
     xcur2png
     gparted
     rose-pine-hyprcursor
+    tree
   ];
 }
