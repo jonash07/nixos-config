@@ -63,8 +63,9 @@ in
       # See https://wiki.hyprland.org/Configuring/Environment-variables/
       
       env = [
-        "XCURSOR_SIZE, 12"
-        "HYPRCURSOR_SIZE, 12"
+        "HYPRCURSOR_THEME, rose-pine-hyprcursor"
+        "XCURSOR_SIZE, 24" 
+        "HYPRCURSOR_SIZE, 24"
         "ELECTRON_OZONE_PLATFORM_HINT, x11"
       ];
       

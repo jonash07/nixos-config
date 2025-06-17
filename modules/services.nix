@@ -20,6 +20,7 @@
   services.samba = {
     enable = true;
     openFirewall = true;
+    nmbd.enable = false;
     settings = {
       Share = {
         browseable = "yes";

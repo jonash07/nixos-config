@@ -26,12 +26,13 @@
     ntfs3g
     exfat
     hyprshot
-    # wineWow64Packages.waylandFull
-    # (wineWow64Packages.waylandFull.override { wineBuild = "--enable-archs=i386,x86_6"; })
     wineWowPackages.waylandFull
-    # wine64Packages.waylandFull
     winetricks
     q4wine
     cabextract
+    hyprcursor
+    xcur2png
+    gparted
+    rose-pine-hyprcursor
   ];
 }
