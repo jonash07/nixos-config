@@ -6,8 +6,7 @@
     fastfetch
     ani-cli
     kitty
-    gimp
-    discord
+    gimp 
     wl-clipboard
     lshw
     freetype
@@ -32,8 +31,7 @@
     cabextract
     hyprcursor
     xcur2png
-    gparted
-    rose-pine-hyprcursor
+    gparted  
     tree
   ];
 }

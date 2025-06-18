@@ -23,7 +23,7 @@
 
         modules-right = [
           "tray"
-          "pulseaudio/slider"
+          #"pulseaudio/slider"
           "bluetooth"
           "network"
           "clock"

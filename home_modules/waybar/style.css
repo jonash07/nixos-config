@@ -22,7 +22,6 @@ window#waybar > box {
 #memory,
 #workspaces,
 #tray,
-#pulseaudio-slider,
 #bluetooth,
 #network,
 #clock,
@@ -50,6 +49,12 @@ window#waybar > box {
 
 }
 
+#tray {
+  min-width: 24px;
+
+}
+
+/*
 #pulseaudio-slider {
     min-height: 20px;
     min-width: 128px;
@@ -73,7 +78,7 @@ window#waybar > box {
     min-width: 4px;
 
 }
-
+*/
 #custom-logo {
     padding: 2px 4px 2px 7px;
 
