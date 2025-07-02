@@ -8,6 +8,9 @@
       rose-pine-hyprcursor
       rose-pine-cursor
       discord
+      spotify
+      spicetify-cli
+      nemo
     ];
   };
 }

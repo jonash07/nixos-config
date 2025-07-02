@@ -18,13 +18,15 @@ window#waybar > box {
 }
 
 #custom-logo,
-#cpu,
-#memory,
 #workspaces,
+#mpris,
 #tray,
+#pulseaudio,
 #bluetooth,
 #network,
 #clock,
+#cpu,
+#memory,
 #custom-power
 {
     background-color: rgba(169, 169, 169, 0.5);
@@ -54,33 +56,13 @@ window#waybar > box {
 
 }
 
-/*
-#pulseaudio-slider {
-    min-height: 20px;
-    min-width: 128px;
-
-}
-
-#pulseaudio-slider slider {
-    min-height: 0px;
-    min-width: 0px;
-
-}
-
-#pulseaudio-slider through {
-    min-height: 16px;
-    min-width: 100px;
-
-}
-
-#pulseaudio-slider highlight {
-    background-color: rgba(64, 64, 64, 0.5);
-    min-width: 4px;
-
-}
-*/
 #custom-logo {
     padding: 2px 4px 2px 7px;
+
+}
+
+#mpris {
+  min-width: 80px;
 
 }
 

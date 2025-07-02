@@ -25,7 +25,7 @@
     ntfs3g
     exfat
     hyprshot
-    wineWowPackages.waylandFull
+    winePackages.unstableFull
     winetricks
     q4wine
     cabextract
@@ -33,5 +33,6 @@
     xcur2png
     gparted  
     tree
+    lutris
   ];
 }

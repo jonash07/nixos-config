@@ -13,20 +13,21 @@
         
         modules-left = [
           "custom/logo"
-          "cpu"
-          "memory"
-        ];
-
-        modules-center = [
           "hyprland/workspaces"
         ];
 
+        modules-center = [
+          "mpris"
+        ];
+
         modules-right = [
-          "tray"
-          #"pulseaudio/slider"
+          "tray" 
+          "pulseaudio"
           "bluetooth"
           "network"
           "clock"
+          "cpu"
+          "memory"
           "custom/power"
         ];
 
@@ -65,6 +66,22 @@
             "9" = "9";
             "0" = "0";
           };
+        };
+
+        "mpris" = {
+          format = "{player_icon} {title} - {artist}";
+          format-paused = "{status_icon} <i>{title} - {artist}</i>";
+          player-icons = {
+            default = "";
+            mpv = "";
+          };
+          status-icons = {
+            paused = "";
+          };
+        };
+
+        "pulseaudio" = {
+          format = "󰝚 {volume}%";
         };
 
         "clock" = {

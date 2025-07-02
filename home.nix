@@ -19,10 +19,6 @@
   # release notes.
   home.stateVersion = "24.11"; # Please read the comment before changing.
 
-  services.udiskie.enable = true;
-
-  programs.kitty.enable = true;
-
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = [

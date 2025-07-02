@@ -44,7 +44,7 @@
       
       # Set programs that you use
       "$terminal" = "alacritty";
-      "$fileManager" = "dolphin";
+      "$fileManager" = "nemo";
       "$menu" = "rofi -show drun";
         
       #############################
@@ -63,7 +63,7 @@
       
       # https://wiki.hyprland.org/Configuring/Variables/#input
       input = {
-        kb_layout = "us";
+        kb_layout = "pl";
         kb_variant = "";
         kb_model = "";
         kb_options = "";
@@ -149,7 +149,7 @@
         # Printscreen utility
         ", Print, exec, hyprshot -m window --clipboard-only"
         "$mainMod, Print, exec, hyprshot -m output --clipboard-only"
-        "$shiftMod, Print, exec, hyprshot -m region --clipboard-only"
+        "$mainMod SHIFT, Print, exec, hyprshot -m region --clipboard-only"
 
       ];
 
@@ -192,6 +192,8 @@
         "suppressevent maximize, class:.*"
         # Fix some dragging issues with XWayland
         "nofocus, class:^$, title:^$, xwayland:1, floating:1, fullscreen:0, pinned:0"
+        "tile, title:(TerraGov Marine Corps)"
+        "tile, initialTitle:tgmc"
       ];
     };
   };

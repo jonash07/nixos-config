@@ -24,8 +24,6 @@ in
       env = [
         "HYPRCURSOR_THEME, rose-pine-hyprcursor"
         "HYPRCURSOR_SIZE, 24"
-        "XCURSOR_THEME, rose-pine-cursor"
-        "XCURSOR_SIZE, 24" 
       ];
       
       #####################
@@ -56,7 +54,7 @@ in
       
       # https://wiki.hyprland.org/Configuring/Variables/#decoration
       decoration = {
-        rounding = 18;
+        rounding = 4;
         rounding_power = 2;
     
         # Change transparency of focused and unfocused windows
