@@ -9,7 +9,6 @@
     gimp 
     wl-clipboard
     lshw
-    freetype
     ffmpeg-full
     rar
     zip
@@ -34,5 +33,8 @@
     gparted  
     tree
     lutris
+    pavucontrol
+    mpv
+    mtpfs
   ];
 }
