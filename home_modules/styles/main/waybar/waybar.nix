@@ -9,7 +9,7 @@
         layer = "top";
         position = "top";
         height = 55;
-        spacing = 6;
+        spacing = 4;
         
         modules-left = [
           "custom/logo"
@@ -82,6 +82,7 @@
 
         "pulseaudio" = {
           format = "󰝚 {volume}%";
+          on-click = "pavucontrol";
         };
 
         "clock" = {
