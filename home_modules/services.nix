@@ -1,7 +1,7 @@
 { ... }:
 
 {
-  services.hyprpolkitagent.enable = true;
+
 
   services.udiskie.enable = true;
 
