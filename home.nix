@@ -1,16 +1,10 @@
 { config, pkgs, ... }:
 
 {
-  imports = [
-    ./home_modules
-  ];
-
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "jim";
   home.homeDirectory = "/home/jim";
-
-  services.hyprpolkitagent.enable = true;
 
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
@@ -73,4 +67,9 @@
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
+
+  imports = [
+    ./home_modules
+  ];
+
 }
