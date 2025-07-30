@@ -35,5 +35,6 @@
     pavucontrol
     mpv
     mtpfs
+    playerctl
   ];
 }
