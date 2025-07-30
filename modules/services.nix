@@ -36,6 +36,5 @@
     videoDrivers = [ "nvidia" ];
   };
 
-  services.flatpak.enable = true;
 }
 

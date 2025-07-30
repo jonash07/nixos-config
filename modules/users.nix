@@ -11,6 +11,7 @@
       spotify
       spicetify-cli
       nemo
+      bottles
     ];
   };
 }
