@@ -54,7 +54,7 @@
       # Autostart necessary processes (like notifications daemons, status bars, etc.)
       # Or execute your favorite apps at launch like this:
       
-      exec-once = "waybar & sww img ~/Downloads/halo-wp-4k.gif";
+      exec-once = "waybar & sww img ~/Wallpapers/halo-wp-4k.gif";
       # exec-once = "waybar & sww clear & swww img ${wallpaper-path}";
         
       #############################
