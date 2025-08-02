@@ -9,4 +9,5 @@
     enable = true;
     package = pkgs.btop-cuda;
   };
+
 }

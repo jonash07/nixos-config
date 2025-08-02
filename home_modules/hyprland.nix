@@ -1,8 +1,8 @@
 { ... }:
 
-let
-  wallpaper-path = ./halo-wp-4k.gif;
-in
+# let
+#   wallpaper-path = ./halo-wp-4k.gif;
+# in
 {
   wayland.windowManager.hyprland = {
     enable = true;
@@ -54,7 +54,8 @@ in
       # Autostart necessary processes (like notifications daemons, status bars, etc.)
       # Or execute your favorite apps at launch like this:
       
-      exec-once = "waybar & sww clear & swww img ${wallpaper-path}";
+      exec-once = "waybar & sww img ~/Downloads/halo-wp-4k.gif";
+      # exec-once = "waybar & sww clear & swww img ${wallpaper-path}";
         
       #############################
       ### ENVIRONMENT VARIABLES ###
@@ -318,6 +319,7 @@ in
         "nofocus, class:^$, title:^$, xwayland:1, floating:1, fullscreen:0, pinned:0"
         "tile, title:(TerraGov Marine Corps)"
         "tile, initialTitle:tgmc"
+        "tile, initialClass:steam_proton"
       ];
 
     };
