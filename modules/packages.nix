@@ -25,8 +25,6 @@
     hyprshot
     winePackages.unstableFull
     winetricks
-    q4wine
-    cabextract
     hyprcursor
     xcur2png
     gparted  
@@ -36,5 +34,9 @@
     mpv
     mtpfs
     playerctl
+    base16-schemes
+    base16-shell-preview
+    android-tools
+    universal-android-debloater
   ];
 }

@@ -6,17 +6,17 @@
     settings = {
       default_session = {
         command = "${pkgs.greetd.tuigreet}/bin/tuigreet --cmd 'hyprland'";
-        user = "greeter";
+        # user = "greeter";
       };
     };
   };
 
-  users.users.greeter = {
-    isNormalUser = false;
-    description = "greetd greeter user";
-    extraGroups = [ "video" "audio" ];
-    linger = true;
-  };
+  # users.users.greeter = {
+  #   isNormalUser = false;
+  #   description = "greetd greeter user";
+  #   extraGroups = [ "video" "audio" ];
+  #   linger = true;
+  # };
 
   environment.systemPackages = with pkgs; [
     greetd.tuigreet

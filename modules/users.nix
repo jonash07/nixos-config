@@ -7,11 +7,10 @@
     packages = with pkgs; [
       rose-pine-hyprcursor
       rose-pine-cursor
-      discord
+      discord-canary
       spotify
       spicetify-cli
       nemo
-      bottles
     ];
   };
 }
