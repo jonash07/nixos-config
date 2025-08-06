@@ -3,6 +3,7 @@
 {
   imports = [
     ./boot.nix
+    ./environment.nix
     ./filesystems.nix
     ./fonts.nix
     ./graphics.nix
@@ -16,7 +17,6 @@
     ./programs.nix
     ./security.nix
     ./services.nix
-    ./session_variables.nix
     ./time.nix
     ./users.nix
     ./virtualisation.nix
