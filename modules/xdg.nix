@@ -4,6 +4,7 @@
   xdg.portal = {
     enable = true;
     extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
-    config.common.default = "gtk";
+    config.common.default = "gtk"; 
   };
+
 }

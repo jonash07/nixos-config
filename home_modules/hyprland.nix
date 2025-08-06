@@ -1,8 +1,5 @@
 { ... }:
 
-# let
-#   wallpaper-path = ./halo-wp-4k.gif;
-# in
 {
   wayland.windowManager.hyprland = {
     enable = true;
@@ -54,8 +51,7 @@
       # Autostart necessary processes (like notifications daemons, status bars, etc.)
       # Or execute your favorite apps at launch like this:
       
-      exec-once = "waybar & sww img ~/Wallpapers/halo-wp-4k.gif";
-      # exec-once = "waybar & sww clear & swww img ${wallpaper-path}";
+      exec-once = "waybar & swww img ~/Wallpapers/halo-wp-4k.gif";
         
       #############################
       ### ENVIRONMENT VARIABLES ###
@@ -64,7 +60,10 @@
       # See https://wiki.hyprland.org/Configuring/Environment-variables/
       
       env = [
+        "NIXOS_OZONE_WL, 1"
         "ELECTRON_OZONE_PLATFORM_HINT, wayland"
+        "XCURSOR_THEME, rose-pine-cursor"
+        "XCURSOR_SIZE, 24"
         "HYPRCURSOR_THEME, rose-pine-hyprcursor"
         "HYPRCURSOR_SIZE, 24"
       ];
