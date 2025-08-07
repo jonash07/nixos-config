@@ -38,5 +38,6 @@
     base16-shell-preview
     android-tools
     universal-android-debloater
+    xremap
   ];
 }

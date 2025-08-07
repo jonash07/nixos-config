@@ -5,5 +5,4 @@
     nerd-fonts.mononoki
   ];
 
-  fonts.fontconfig.subpixel.lcdfilter = "none";
 }
