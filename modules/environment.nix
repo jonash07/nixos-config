@@ -5,10 +5,12 @@
     EDITOR = "nvim";
   };
 
-  environment.interactiveShellInit = ''
-    alias nrs="sudo nixos-rebuild switch --flake /home/jim/nixos-config#default"
-    alias nfu="sudo nix flake update --flake /home/jim/nixos-config#default"
-  '';
+  environment.shellAliases = {
+    nrs = "sudo nixos-rebuild switch --flake ~/nixos-config#default";
+    nrb = "sudo nixos-rebuild boot --flake ~/nixos-config#default";
+    nrt = "sudo nixos-rebuild test --flake ~/nixos-config#default";
+    nfu = "sudo nix flake update --flake ~/nixos-config#default";
+  };
 
   environment.sessionVariables = {
     WLR_NO_HARDWARE_CURSORS = "1";
