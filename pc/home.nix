@@ -69,8 +69,8 @@
   programs.home-manager.enable = true;
 
   imports = [
-    ./home_modules
     ./../home_modules
+    ./home_modules
   ];
 
 }
