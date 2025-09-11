@@ -70,7 +70,7 @@
 
   imports = [
     ./../home_modules
-
+    ./home_modules
   ];
 
 }
