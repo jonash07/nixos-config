@@ -3,8 +3,8 @@
 {
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
-  home.username = "jim";
-  home.homeDirectory = "/home/jim";
+  home.username = "alice";
+  home.homeDirectory = "/home/alice";
 
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
@@ -70,6 +70,7 @@
 
   imports = [
     ./home_modules
+    ./../home_modules
   ];
 
 }

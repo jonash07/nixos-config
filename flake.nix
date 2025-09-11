@@ -16,12 +16,20 @@
       pkgs = nixpkgs.legacyPackages.${system};
     in
     {
-      nixosConfigurations.default = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs;};
+      nixosConfigurations.pc = nixpkgs.lib.nixosSystem {
+        specialArgs = { inherit inputs; };
         modules = [
           inputs.home-manager.nixosModules.default
-          ./configuration.nix
-          ./hardware-configuration.nix
+          ./pc
+          ./modules
+        ];
+      };
+      nixosConfigurations.laptop = nixpkgs.lib.nixosSystem {
+        specialArgs = { inherit inputs; };
+        modules = [
+          inputs.home-manager.nixosModules.default
+          ./laptop
+          ./modules
         ];
       };
     };

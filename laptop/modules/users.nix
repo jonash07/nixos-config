@@ -1,16 +1,17 @@
 { pkgs, ... }:
 
 {
-  users.users.jim = {
+  users.users.alice = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "libvirtd" ];
+    extraGroups = [ "wheel" ];
     packages = with pkgs; [
       rose-pine-hyprcursor
-      rose-pine-cursor
+      rose-pine-cursor 
       discord-canary
       spotify
       spicetify-cli
       nemo
+      libreoffice
     ];
   };
 }

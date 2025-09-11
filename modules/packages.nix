@@ -23,8 +23,6 @@
     ntfs3g
     exfat
     hyprshot
-    winePackages.unstableFull
-    winetricks
     hyprcursor
     xcur2png
     gparted  
@@ -34,10 +32,11 @@
     mpv
     mtpfs
     playerctl
-    base16-schemes
-    base16-shell-preview
     android-tools
     universal-android-debloater
     xremap
+    bluetui
+    python314
+    librewolf
   ];
 }

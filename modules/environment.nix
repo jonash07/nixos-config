@@ -6,10 +6,14 @@
   };
 
   environment.shellAliases = {
-    nrs = "sudo nixos-rebuild switch --flake ~/nixos-config#default";
-    nrb = "sudo nixos-rebuild boot --flake ~/nixos-config#default";
-    nrt = "sudo nixos-rebuild test --flake ~/nixos-config#default";
-    nfu = "sudo nix flake update --flake ~/nixos-config#default";
+    pnrs = "sudo nixos-rebuild switch --flake ~/nixos-config#pc";
+    pnrb = "sudo nixos-rebuild boot --flake ~/nixos-config#pc";
+    pnrt = "sudo nixos-rebuild test --flake ~/nixos-config#pc";
+    pnfu = "sudo nix flake update --flake ~/nixos-config#pc";
+    lnrs = "sudo nixos-rebuild switch --flake ~/nixos-config#laptop";
+    lnrb = "sudo nixos-rebuild boot --flake ~/nixos-config#laptop";
+    lnrt = "sudo nixos-rebuild test --flake ~/nixos-config#laptop";
+    lnfu = "sudo nix flake update --flake ~/nixos-config#laptop";
   };
 
   environment.sessionVariables = {

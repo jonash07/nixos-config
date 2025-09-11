@@ -52,7 +52,7 @@
       # Autostart necessary processes (like notifications daemons, status bars, etc.)
       # Or execute your favorite apps at launch like this:
       
-      exec-once = "waybar & swww img ~/Wallpapers/halo-wp-4k.gif";
+      exec-once = "waybar & swww img ~/Wallpapers/venator-and-kamino.3840x2160.webp";
         
       #############################
       ### ENVIRONMENT VARIABLES ###
@@ -232,6 +232,7 @@
         "$mainMod, R, exec, $menu"
         "$mainMod, P, pseudo," # dwindle
         "$mainMod, J, togglesplit," # dwindle
+        "$mainMod, F, fullscreen, 0"
 
         # Move focus with mainMod + arrow keys
         "$mainMod, left, movefocus, l"
@@ -317,8 +318,7 @@
         "suppressevent maximize, class:.*"
         # Fix some dragging issues with XWayland
         "nofocus, class:^$, title:^$, xwayland:1, floating:1, fullscreen:0, pinned:0"
-        "tile, title:(TerraGov Marine Corps)"
-        "tile, initialTitle:tgmc"
+
         "tile, initialClass:steam_proton"
       ];
 
