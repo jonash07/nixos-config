@@ -3,7 +3,10 @@
 {
   networking = {
     hostName = "shade";
-    networkmanager.enable = true;
+    networkmanager = {
+      enable = true;
+      wifi.powersave = true;
+    };
   };
 }
 
