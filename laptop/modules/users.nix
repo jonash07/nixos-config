@@ -3,7 +3,7 @@
 {
   users.users.alice = {
     isNormalUser = true;
-    extraGroups = [ "wheel" ];
+    extraGroups = [ "wheel" "networkmanager" ];
     packages = with pkgs; [
       rose-pine-hyprcursor
       rose-pine-cursor 

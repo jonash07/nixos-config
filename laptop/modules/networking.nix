@@ -1,6 +1,9 @@
 { ... }:
 
 {
-  networking.wireless.enable = true;
+  networking = {
+    hostName = "shade";
+    networkmanager.enable = true;
+  };
 }
 
