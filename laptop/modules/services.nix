@@ -22,4 +22,12 @@
   services.flatpak.enable = true;
 
   services.power-profiles-daemon.enable = true;
+
+  services.undervolt = {
+    enable = true;
+    coreOffset = -100;
+    gpuOffset = -100;
+    temp = 80;
+    turbo = 0;
+  };
 }
