@@ -32,6 +32,8 @@
     enable = true;
     coreOffset = -100;
     gpuOffset = -100;
+    uncoreOffset = -60;
+    analogioOffset = -60;
     temp = 80;
     turbo = 0;
   };
