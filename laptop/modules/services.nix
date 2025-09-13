@@ -21,7 +21,12 @@
 
   services.flatpak.enable = true;
 
-  services.power-profiles-daemon.enable = true;
+  services.tlp = {
+    enable = true;
+    # settings = {
+      
+    # };
+  };
 
   services.undervolt = {
     enable = true;
@@ -30,4 +35,4 @@
     temp = 80;
     turbo = 0;
   };
-}
+} 
