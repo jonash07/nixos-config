@@ -38,9 +38,7 @@
     bluetui
     python314
     librewolf
-    brightnessctl
     s-tui
     stress
-    lm_sensors
   ];
 }
