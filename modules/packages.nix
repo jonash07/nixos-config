@@ -14,7 +14,6 @@
     zip
     unzip
     yt-dlp
-    davinci-resolve
     ripgrep
     neovim
     libgcc
