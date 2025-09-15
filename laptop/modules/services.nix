@@ -33,8 +33,8 @@
 
   services.undervolt = {
     enable = true;
-    coreOffset = -100;
-    gpuOffset = -100;
+    coreOffset = -90;
+    gpuOffset = -90;
     uncoreOffset = -60;
     analogioOffset = -60;
     temp = 80;
