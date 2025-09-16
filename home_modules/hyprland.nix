@@ -53,8 +53,6 @@
       env = [
         "NIXOS_OZONE_WL, 1"
         "ELECTRON_OZONE_PLATFORM_HINT, wayland"
-        "XCURSOR_THEME, rose-pine-cursor"
-        "XCURSOR_SIZE, 24"
         "HYPRCURSOR_THEME, rose-pine-hyprcursor"
         "HYPRCURSOR_SIZE, 24"
       ];
