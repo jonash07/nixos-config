@@ -23,7 +23,6 @@
     exfat
     hyprshot
     hyprcursor
-    xcur2png
     gparted  
     tree
     lutris
@@ -39,5 +38,14 @@
     librewolf
     s-tui
     stress
+    rose-pine-hyprcursor
+    discord-canary
+    spotify
+    spicetify-cli
+    nemo
+    libreoffice
+    starship
+    librsvg
+    gnome-icon-theme
   ];
 }
