@@ -44,7 +44,6 @@
     spicetify-cli
     nemo
     libreoffice
-    starship
     librsvg
     gnome-icon-theme
   ];
