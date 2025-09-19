@@ -13,6 +13,7 @@
     lnrb = "sudo nixos-rebuild boot --flake ~/nixos-config#laptop";
     lnrt = "sudo nixos-rebuild test --flake ~/nixos-config#laptop";
     nfu = "sudo nix flake update --flake ~/nixos-config";
+    ncg = "sudo nix-collect-garbage --delete-older-than 1d";
   };
 
   environment.sessionVariables = {
