@@ -58,7 +58,6 @@ run_checks() {
 
 check_latest() {
   if ! [ -f ~/Wallpaper/latest.txt ]; then
-    touch ~/Wallpaper/latest.txt
     false;
   fi
 
@@ -171,8 +170,8 @@ main() {
 }
 
 
-if [ $1 > 3 ] || [ $1 < 1]; then
-  exit 1
+if ! [ $1 ]; then
+  exit 1;
 fi
 
 
