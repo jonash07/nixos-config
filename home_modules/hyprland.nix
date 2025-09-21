@@ -42,7 +42,7 @@
       # Autostart necessary processes (like notifications daemons, status bars, etc.)
       # Or execute your favorite apps at launch like this:
       
-      exec-once = "waybar & swww img ~/Wallpapers/venator-and-kamino.3840x2160.webp";
+      exec-once = "waybar & ./wallscript.sh 1";
         
       #############################
       ### ENVIRONMENT VARIABLES ###
@@ -188,6 +188,12 @@
         "$mainMod, P, pseudo," # dwindle
         "$mainMod, J, togglesplit," # dwindle
         "$mainMod, F, fullscreen, 0"
+        
+        # Next wallpaper 
+        "$mainMod, ], ./wallscript.sh 2,"
+
+        # Previous wallpaper 
+        "$mainMod, [, ./wallscript.sh 3,"
 
         # Move focus with mainMod + arrow keys
         "$mainMod, left, movefocus, l"

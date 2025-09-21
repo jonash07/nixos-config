@@ -171,7 +171,7 @@ main() {
 }
 
 
-if ! [ $1 ]; then
+if [ $1 > 3 ] || [ $1 < 1]; then
   exit 1
 fi
 
