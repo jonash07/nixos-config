@@ -3,6 +3,7 @@
 {
   environment.variables = {
     EDITOR = "nvim";
+    wallscript = ../home_modules/wallscript.sh
   };
 
   environment.shellAliases = {

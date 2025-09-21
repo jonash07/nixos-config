@@ -46,6 +46,5 @@
     libreoffice
     librsvg
     gnome-icon-theme
-    (import ../custom/wallscript.nix)
   ];
 }
