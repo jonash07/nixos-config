@@ -3,7 +3,6 @@
 {
   environment.variables = {
     EDITOR = "nvim";
-    wallscript = ../home_modules/wallscript.sh
   };
 
   environment.shellAliases = {
@@ -19,10 +18,6 @@
 
   environment.sessionVariables = {
     WLR_NO_HARDWARE_CURSORS = "1";
-  };
-
-  environment.variables.PATH = {
-    wallscript = ../home_modules/wallscript.sh;
   };
 
 }

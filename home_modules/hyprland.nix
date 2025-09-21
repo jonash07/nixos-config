@@ -42,7 +42,7 @@
       # Autostart necessary processes (like notifications daemons, status bars, etc.)
       # Or execute your favorite apps at launch like this:
       
-      exec-once = "waybar & wallscript 1";
+      exec-once = "waybar & ~/nixos-config/home_modules/wallscript.sh 1";
         
       #############################
       ### ENVIRONMENT VARIABLES ###
@@ -189,12 +189,6 @@
         "$mainMod, J, togglesplit," # dwindle
         "$mainMod, F, fullscreen, 0"
         
-        # Next wallpaper 
-        "$mainMod, ], wallscript 2,"
-
-        # Previous wallpaper 
-        "$mainMod, [, wallscript 3,"
-
         # Move focus with mainMod + arrow keys
         "$mainMod, left, movefocus, l"
         "$mainMod, right, movefocus, r"
@@ -237,6 +231,12 @@
         ", Print, exec, hyprshot -m window --clipboard-only"
         "$mainMod, Print, exec, hyprshot -m output --clipboard-only"
         "$mainMod SHIFT, Print, exec, hyprshot -m region --clipboard-only"
+
+        # Next wallpaper 
+        "$mainMod, K, exec, ~/nixos-config/home_modules/wallscript.sh 2"
+
+        # Previous wallpaper 
+        "$mainMod, L, exec, ~/nixos-config/home_modules/wallscript.sh 3"
 
       ];
 
