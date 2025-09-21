@@ -2,14 +2,12 @@
 
 
 check_dirs() {
-  # Check for the main directory
   if ![ -d ~/Wallpaper ]; then
     mkdir ~/Wallpaper
     mkdir ~/Wallpaper/Wallpapers
     return false
   ;fi
   
-  # Check for the wallpapers directory
   if ![ -d ~/Wallpaper/Wallpapers ]; then
     mkdir ~/Wallpaper/Wallpapers
     return false
@@ -20,11 +18,22 @@ check_dirs() {
 }
 
 
+get_wallpapers() {
+  wallpapers=()
+
+  for item in $(ls ~/Wallpapers/); do  
+    wallpapers+=($item)
+  done
+
+  return wallpapers
+
+}
+
+
 check_wallpapers() {
-  wallpapers=$(ls ~/Wallpaper/Wallpapers)
-  
-  # If there are none use the default
-  if [wallpapers = ""]; then
+  wallpapers=get_wallpapers
+ 
+  if [wallpapers = ()]; then
     return false
   ;fi
 
@@ -34,12 +43,10 @@ check_wallpapers() {
 
 
 run_checks() {
-  # Check if valid directories exist
   if ![ check_dirs ]; then
     return false
   ;fi
 
-  # Check if any wallpapers exist
   if ![ check_wallpapers ]; then
     return false
   ;fi
@@ -49,44 +56,31 @@ run_checks() {
 }
 
 
-index_wallpapers() {
-  current=0
-  wallpapers=()
+check_latest() {
+  if ![ -f ~/Wallpaper/latest.txt ]; then
+    touch ~/Wallpaper/latest.txt
+    return false
+  ;fi
 
-  # Assemble the list of wallpapers and the length of them
-  for item in $(ls ~/Wallpapers/); do 
-    echo $length
-    wallpapers+=($item)
-    echo $item
+  wallpapers=get_wallpapers
+
+  for wp in ${wallpapers[@]}; do
+    if [ $(cat ~/Wallpaper/latest.txt) -eq $wp ]; then
+      return True
+    ;fi
   done
 
-  echo " "
-
-  for wp in ${wallpapers[@]}; do 
-    echo $wp
-  done
-
-  echo ${wallpapers[*]}
-
+  return false
+  
 }
 
 
-check_latest() {
-  if [  ]; then
-    #...
-    #make file
-    return false
-  ;fi
+gen_ran_duration() {
+  durations=(1.5 2 2.5)
+  RANDOM=$$$(date +%s)
+  ran_dur=${durations[ $RANDOM % ${#durations[@]} ]}
+  return $ran_dur
 
-  if [  ]; then
-    #...
-    return false
-  ;fi
-
-  return true
-  
-  # check if it exists at all
-  # check if it has a valid wallpaper in it or anything at all
 }
 
 
@@ -99,61 +93,117 @@ gen_ran_angle() {
 }
 
 
-init_wallpaper() {
+default_wallpaper() {
   ran_angle=gen_ran_angle
-
-  if ![ run_checks ]; then
-    swww img -t wipe --transition-angle $ran_angle --transition-duration 1.5 ./default.png
-    exit 0
-  ;fi
-  
-  if ![ check_latest ]; then
-    #...
-    # init latest file
-    exit 0
-  ;fi
-
-  # init here
+  ran_dur=gen_ran_dur
+  swww img -t wipe --transition-angle $ran_angle --transition-duration $ran_dur ./default.png
 
 }
 
 
-next_wallpaper() {
-  # Get a random transition angle
+apply_wallpaper() {
   ran_angle=gen_ran_angle
+  ran_dur=gen_ran_duration
+  swww img -t wipe --transition-angle $ran_angle --transition-duration 1.5 $ran_dur $1
+  echo "$1" > ~/Wallpaper/latest.txt
 
-  if ![ run_checks ]; then
-    swww img -t wipe --transition-angle $ran_angle --transition-duration 1.5 ./default.png 
-    exit 0
-  ;fi
- 
-  if ![ check_latest ]; then
-    #...
-    # init latest file
-    exit 0
-  ;fi
-
-  # load here
-  
 }
 
 
-previous_wallpaper() {
-  # Get a random transition angle
-  ran_angle=gen_ran_angle
-
+core() {
   if ![ run_checks ]; then
-    swww img -t wipe --transition-angle $ran_angle --transition-duration 1.5 ./default.png
+    default_wallpaper
     exit 0
   ;fi
   
+  wallpapers=get_wallpapers
+
   if ![ check_latest ]; then
-    #...
-    # init latest file
+    apply_wallpaper ${wallpapers[0]}
     exit 0
   ;fi
 
-  # load here
+}
+
+
+get_index() {
+  wallpapers=get_wallpapers
+
+  current=$(cat ~/Wallpaper/latest.txt)
+
+  length=${#wallpapers[@]}
+
+  index=0
+
+  for wp in ${wallpapers[@]}; do 
+    if [ $wp -eq $current ]; then
+      break 
+    ;fi
+    index=$(($index+1))
+  done
+
+  return $index
+
+}
+
+
+main() {
+  if ![ run_checks ]; then
+    default_wallpaper
+    exit 0
+  ;fi
+  
+  wallpapers=get_wallpapers
+
+  if ![ check_latest ]; then
+    apply_wallpaper ${wallpapers[0]}
+    exit 0
+  ;fi
+
+  option=$1  
+
+  current=$(cat ~/Wallpaper/latest.txt)
+
+  # Init 
+  if [ $option -eq 1 ]; then
+    apply_wallpaper $current
+    exit 0
+  ;fi
+
+  length=${#wallpapers[@]}
+
+  index=0
+
+  for wp in ${wallpapers[@]}; do 
+    if [ $wp -eq $current ]; then
+      break 
+    ;fi
+    index=$(($index+1))
+  done
+
+  # Next 
+  if [ $option -eq 2 ]; then 
+    next=$(($index+1))
+
+    if [ $index -eq $length ]; then
+      next=0
+    ;fi 
+
+    apply_wallpaper ${wallpapers[$next]}
+    exit 0
+  ;fi
+
+  # Previous 
+  if [ $option -eq 3 ]; then 
+    next=$(($index-1))
+
+    if [ $index -eq 0 ]; then
+      next=$length
+    ;fi 
+
+    apply_wallpaper ${wallpapers[$next]} 
+    exit 0
+  ;fi
 
 }
 
@@ -161,16 +211,13 @@ previous_wallpaper() {
 while getopts ":i:n:p" option; do
   case $option in
     i)
-      init_wallpaper
-      exit 0
+      main 1
       ;;
     n)
-      next_wallpaper
-      exit 0
+      main 2
       ;;
     p)
-      previous_wallpaper
-      exit 0
+      main 3 
       ;;
     *)
       exit 1
