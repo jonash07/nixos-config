@@ -20,4 +20,8 @@
     WLR_NO_HARDWARE_CURSORS = "1";
   };
 
+  environment.variables.PATH = {
+    wallscript = ../home_modules/wallscript.sh;
+  };
+
 }
