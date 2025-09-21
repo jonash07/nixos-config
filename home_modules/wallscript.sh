@@ -5,13 +5,13 @@ check_dirs() {
   if ![ -d ~/Wallpaper ]; then
     mkdir ~/Wallpaper
     mkdir ~/Wallpaper/Wallpapers
-    return false
-  ;fi
+    return false;
+  fi
   
   if ![ -d ~/Wallpaper/Wallpapers ]; then
     mkdir ~/Wallpaper/Wallpapers
-    return false
-  ;fi
+    return false;
+  fi
 
   return true
 
@@ -25,17 +25,17 @@ get_wallpapers() {
     wallpapers+=($item)
   done
 
-  return $wallpapers
+  echo $wallpapers
 
 }
 
 
 check_wallpapers() {
-  wallpapers=get_wallpapers
+  wallpapers=$(get_wallpapers)
  
-  if [ $wallpapers = () ]; then
-    return false
-  ;fi
+  if [ ${#array[@]} -eq 0 ]; then
+    return false;
+  fi
 
   return true
 
@@ -44,12 +44,12 @@ check_wallpapers() {
 
 run_checks() {
   if ![ check_dirs ]; then
-    return false
-  ;fi
+    return false;
+  fi
 
   if ![ check_wallpapers ]; then
-    return false
-  ;fi
+    return false;
+  fi
 
   return true
 
@@ -59,15 +59,15 @@ run_checks() {
 check_latest() {
   if ![ -f ~/Wallpaper/latest.txt ]; then
     touch ~/Wallpaper/latest.txt
-    return false
-  ;fi
+    return false;
+  fi
 
-  wallpapers=get_wallpapers
+  wallpapers=$(get_wallpapers)
 
   for wp in ${wallpapers[@]}; do
     if [ $(cat ~/Wallpaper/latest.txt) -eq $wp ]; then
-      return True
-    ;fi
+      return true;
+    fi
   done
 
   return false
@@ -77,33 +77,33 @@ check_latest() {
 
 gen_ran_duration() {
   durations=(1.5 2 2.5)
-  RANDOM=$$$(date +%s)
-  ran_dur=${durations[ $RANDOM % ${#durations[@]} ]}
-  return $ran_dur
+  rand=$(shuf -i 0-2 -n 1)
+  ran_dur=${durations[$rand]}
+  echo $ran_dur
 
 }
 
 
 gen_ran_angle() {
   angles=(0 45 90 135 180 225 270 315)
-  RANDOM=$$$(date +%s)
-  ran_angle=${angles[ $RANDOM % ${#angles[@]} ]}
-  return $ran_angle
+  rand=$(shuf -i 0-7 -n 1)
+  ran_angle=${angles[$rand]}
+  echo $ran_angle
 
 }
 
 
 default_wallpaper() {
-  ran_angle=gen_ran_angle
-  ran_dur=gen_ran_dur
+  ran_angle=$(gen_ran_angle)
+  ran_dur=$(gen_ran_dur)
   swww img -t wipe --transition-angle $ran_angle --transition-duration $ran_dur ./default.png
 
 }
 
 
 apply_wallpaper() {
-  ran_angle=gen_ran_angle
-  ran_dur=gen_ran_duration
+  ran_angle=$(gen_ran_angle)
+  ran_dur=$(gen_ran_duration)
   swww img -t wipe --transition-angle $ran_angle --transition-duration 1.5 $ran_dur $1
   echo "$1" > ~/Wallpaper/latest.txt
 
@@ -113,15 +113,15 @@ apply_wallpaper() {
 main() {
   if ![ run_checks ]; then
     default_wallpaper
-    exit 0
-  ;fi
+    exit 0;
+  fi
   
-  wallpapers=get_wallpapers
+  wallpapers=$(get_wallpapers)
 
   if ![ check_latest ]; then
     apply_wallpaper ${wallpapers[0]}
-    exit 0
-  ;fi
+    exit 0;
+  fi
 
   option=$1  
 
@@ -130,8 +130,8 @@ main() {
   # Init 
   if [ $option -eq 1 ]; then
     apply_wallpaper $current
-    exit 0
-  ;fi
+    exit 0;
+  fi
 
   length=${#wallpapers[@]}
 
@@ -139,8 +139,8 @@ main() {
 
   for wp in ${wallpapers[@]}; do 
     if [ $wp -eq $current ]; then
-      break 
-    ;fi
+      break;
+    fi
     index=$(($index+1))
   done
 
@@ -149,24 +149,24 @@ main() {
     next=$(($index+1))
 
     if [ $index -eq $length ]; then
-      next=0
-    ;fi 
+      next=0;
+    fi 
 
     apply_wallpaper ${wallpapers[$next]}
-    exit 0
-  ;fi
+    exit 0;
+  fi
 
   # Previous 
   if [ $option -eq 3 ]; then 
     next=$(($index-1))
 
     if [ $index -eq 0 ]; then
-      next=$length
-    ;fi 
+      next=$length;
+    fi 
 
     apply_wallpaper ${wallpapers[$next]} 
-    exit 0
-  ;fi
+    exit 0;
+  fi
 
 }
 
