@@ -25,7 +25,7 @@ get_wallpapers() {
     wallpapers+=($item)
   done
 
-  return wallpapers
+  return $wallpapers
 
 }
 
@@ -33,7 +33,7 @@ get_wallpapers() {
 check_wallpapers() {
   wallpapers=get_wallpapers
  
-  if [wallpapers = ()]; then
+  if [ $wallpapers = () ]; then
     return false
   ;fi
 
@@ -106,43 +106,6 @@ apply_wallpaper() {
   ran_dur=gen_ran_duration
   swww img -t wipe --transition-angle $ran_angle --transition-duration 1.5 $ran_dur $1
   echo "$1" > ~/Wallpaper/latest.txt
-
-}
-
-
-core() {
-  if ![ run_checks ]; then
-    default_wallpaper
-    exit 0
-  ;fi
-  
-  wallpapers=get_wallpapers
-
-  if ![ check_latest ]; then
-    apply_wallpaper ${wallpapers[0]}
-    exit 0
-  ;fi
-
-}
-
-
-get_index() {
-  wallpapers=get_wallpapers
-
-  current=$(cat ~/Wallpaper/latest.txt)
-
-  length=${#wallpapers[@]}
-
-  index=0
-
-  for wp in ${wallpapers[@]}; do 
-    if [ $wp -eq $current ]; then
-      break 
-    ;fi
-    index=$(($index+1))
-  done
-
-  return $index
 
 }
 
