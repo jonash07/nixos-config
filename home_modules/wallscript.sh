@@ -2,18 +2,18 @@
 
 
 check_dirs() {
-  if ![ -d ~/Wallpaper ]; then
+  if ! [ -d ~/Wallpaper ]; then
     mkdir ~/Wallpaper
     mkdir ~/Wallpaper/Wallpapers
-    return false;
+    false;
   fi
   
-  if ![ -d ~/Wallpaper/Wallpapers ]; then
+  if ! [ -d ~/Wallpaper/Wallpapers ]; then
     mkdir ~/Wallpaper/Wallpapers
-    return false;
+    false;
   fi
 
-  return true
+  true
 
 }
 
@@ -21,7 +21,7 @@ check_dirs() {
 get_wallpapers() {
   wallpapers=()
 
-  for item in $(ls ~/Wallpapers/); do  
+  for item in $(ls ~/Wallpaper/Wallpapers); do  
     wallpapers+=($item)
   done
 
@@ -34,43 +34,43 @@ check_wallpapers() {
   wallpapers=$(get_wallpapers)
  
   if [ ${#array[@]} -eq 0 ]; then
-    return false;
+    false;
   fi
 
-  return true
+  true
 
 }
 
 
 run_checks() {
-  if ![ check_dirs ]; then
-    return false;
+  if ! [ $(check_dirs) ]; then
+    false;
   fi
 
-  if ![ check_wallpapers ]; then
-    return false;
+  if ! [ $(check_wallpapers) ]; then
+    false;
   fi
 
-  return true
+  true
 
 }
 
 
 check_latest() {
-  if ![ -f ~/Wallpaper/latest.txt ]; then
+  if ! [ -f ~/Wallpaper/latest.txt ]; then
     touch ~/Wallpaper/latest.txt
-    return false;
+    false;
   fi
 
   wallpapers=$(get_wallpapers)
 
   for wp in ${wallpapers[@]}; do
     if [ $(cat ~/Wallpaper/latest.txt) -eq $wp ]; then
-      return true;
+      true;
     fi
   done
 
-  return false
+  false
   
 }
 
@@ -94,31 +94,31 @@ gen_ran_angle() {
 
 
 default_wallpaper() {
-  ran_angle=$(gen_ran_angle)
-  ran_dur=$(gen_ran_dur)
-  swww img -t wipe --transition-angle $ran_angle --transition-duration $ran_dur ./default.png
+  angle=$(gen_ran_angle)
+  dur=$(gen_ran_duration)
+  swww img -t wipe --transition-angle $angle --transition-duration $dur ./default.jpg
 
 }
 
 
 apply_wallpaper() {
-  ran_angle=$(gen_ran_angle)
-  ran_dur=$(gen_ran_duration)
-  swww img -t wipe --transition-angle $ran_angle --transition-duration 1.5 $ran_dur $1
+  angle=$(gen_ran_angle)
+  dur=$(gen_ran_duration)
+  swww img -t wipe --transition-angle $angle --transition-duration 1.5 $dur $1
   echo "$1" > ~/Wallpaper/latest.txt
 
 }
 
 
 main() {
-  if ![ run_checks ]; then
+  if ! [ $(run_checks) ]; then
     default_wallpaper
     exit 0;
   fi
   
   wallpapers=$(get_wallpapers)
 
-  if ![ check_latest ]; then
+  if ! [ $(check_latest) ]; then
     apply_wallpaper ${wallpapers[0]}
     exit 0;
   fi
@@ -171,20 +171,10 @@ main() {
 }
 
 
-while getopts ":i:n:p" option; do
-  case $option in
-    i)
-      main 1
-      ;;
-    n)
-      main 2
-      ;;
-    p)
-      main 3 
-      ;;
-    *)
-      exit 1
-      ;;
-  esac
-done
+if ! [ $1 ]; then
+  exit 1
+fi
+
+
+main $1
 
