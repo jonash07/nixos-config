@@ -5,165 +5,176 @@ check_dirs() {
   if ! [ -d ~/Wallpaper ]; then
     mkdir ~/Wallpaper
     mkdir ~/Wallpaper/Wallpapers
-    false;
+    echo 0
+    return;
   fi
   
   if ! [ -d ~/Wallpaper/Wallpapers ]; then
     mkdir ~/Wallpaper/Wallpapers
-    false;
+    echo 0
+    return;
   fi
 
-  true
+  echo 1
 
 }
 
 
 get_wallpapers() {
-  wallpapers=()
+  local list_wps=$(ls ~/Wallpaper/Wallpapers/)
+  readarray -d "  " -t wallpapers <<< "$list_wps"
+  wps=()
 
-  for item in $(ls ~/Wallpaper/Wallpapers); do  
-    wallpapers+=($item)
+  for word in "${wallpapers[@]}"; do 
+    wps+=($word)
   done
-
-  echo $wallpapers
 
 }
 
 
 check_wallpapers() {
-  wallpapers=$(get_wallpapers)
- 
-  if [ ${#array[@]} -eq 0 ]; then
-    false;
+  if [ ${#wps[@]} -eq 0 ]; then
+    echo 0
+    return;
   fi
 
-  true
+  echo 1
 
 }
 
 
 run_checks() {
-  if ! [ $(check_dirs) ]; then
-    false;
+  if [ $(check_dirs) == 0 ]; then
+    echo 0
+    return;
   fi
 
-  if ! [ $(check_wallpapers) ]; then
-    false;
+  get_wallpapers
+
+  if [ $(check_wallpapers) == 0 ]; then
+    echo 0
+    return;
   fi
 
-  true
+  echo 1
 
 }
 
 
 check_latest() {
   if ! [ -f ~/Wallpaper/latest.txt ]; then
-    false;
+    echo 0
+    return;
   fi
 
-  wallpapers=$(get_wallpapers)
+  if ! [ $(cat ~/Wallpaper/latest.txt) ]; then
+    echo 0
+    return;
+  fi
 
-  for wp in ${wallpapers[@]}; do
-    if [ $(cat ~/Wallpaper/latest.txt) -eq $wp ]; then
-      true;
+  for wp in ${wps[@]}; do
+    if [ $(cat ~/Wallpaper/latest.txt) == $wp ]; then
+      echo 1 
+      return;
     fi
   done
 
-  false
+  echo 0
   
 }
 
 
 gen_ran_duration() {
-  durations=(1.5 2 2.5)
-  rand=$(shuf -i 0-2 -n 1)
-  ran_dur=${durations[$rand]}
+  local durations=(1.5 2 2.5)
+  local rand=$(shuf -i 0-2 -n 1)
+  local ran_dur=${durations[$rand]}
   echo $ran_dur
 
 }
 
 
 gen_ran_angle() {
-  angles=(0 45 90 135 180 225 270 315)
-  rand=$(shuf -i 0-7 -n 1)
-  ran_angle=${angles[$rand]}
+  local angles=(0 45 90 135 180 225 270 315)
+  local rand=$(shuf -i 0-7 -n 1)
+  local ran_angle=${angles[$rand]}
   echo $ran_angle
 
 }
 
 
 default_wallpaper() {
-  angle=$(gen_ran_angle)
-  dur=$(gen_ran_duration)
+  local angle=$(gen_ran_angle)
+  local dur=$(gen_ran_duration)
   swww img -t wipe --transition-angle $angle --transition-duration $dur ./default.jpg
 
 }
 
 
 apply_wallpaper() {
-  angle=$(gen_ran_angle)
-  dur=$(gen_ran_duration)
-  swww img -t wipe --transition-angle $angle --transition-duration 1.5 $dur $1
-  echo "$1" > ~/Wallpaper/latest.txt
+  local angle=$(gen_ran_angle)
+  local dur=$(gen_ran_duration)
+  swww img -t wipe --transition-angle $angle --transition-duration $dur ~/Wallpaper/Wallpapers/$1
+  echo $1 > ~/Wallpaper/latest.txt
 
 }
 
 
 main() {
-  if ! [ $(run_checks) ]; then
+  if [ $(run_checks) == 0 ]; then
     default_wallpaper
     exit 0;
   fi
-  
-  wallpapers=$(get_wallpapers)
 
-  if ! [ $(check_latest) ]; then
-    apply_wallpaper ${wallpapers[0]}
+  get_wallpapers
+
+  if [ $(check_latest) == 0 ]; then
+    apply_wallpaper ${wps[0]}
     exit 0;
   fi
 
-  option=$1  
+  local option=$1  
 
-  current=$(cat ~/Wallpaper/latest.txt)
+  local current=$(cat ~/Wallpaper/latest.txt)
 
   # Init 
-  if [ $option -eq 1 ]; then
+  if [ $option == 1 ]; then
     apply_wallpaper $current
     exit 0;
   fi
 
-  length=${#wallpapers[@]}
+  local length=${#wps[@]}
 
-  index=0
+  local index=0
 
-  for wp in ${wallpapers[@]}; do 
-    if [ $wp -eq $current ]; then
+  for wp in ${wps[@]}; do 
+    if [ $wp == $current ]; then
       break;
     fi
     index=$(($index+1))
   done
 
   # Next 
-  if [ $option -eq 2 ]; then 
+  if [ $option == 2 ]; then
     next=$(($index+1))
 
-    if [ $index -eq $length ]; then
+    if [ $next == $length ]; then
       next=0;
     fi 
 
-    apply_wallpaper ${wallpapers[$next]}
+    apply_wallpaper ${wps[$next]}
+
     exit 0;
   fi
 
   # Previous 
-  if [ $option -eq 3 ]; then 
+  if [ $option == 3 ]; then 
     next=$(($index-1))
 
-    if [ $index -eq 0 ]; then
-      next=$length;
+    if [ $next == 0 ]; then
+      next=$(($length-1));
     fi 
 
-    apply_wallpaper ${wallpapers[$next]} 
+    apply_wallpaper ${wps[$next]} 
     exit 0;
   fi
 
