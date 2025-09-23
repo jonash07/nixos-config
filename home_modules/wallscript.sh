@@ -170,7 +170,7 @@ main() {
   if [ $option == 3 ]; then 
     next=$(($index-1))
 
-    if [ $next == 0 ]; then
+    if [ $next == -1 ]; then
       next=$(($length-1));
     fi 
 
