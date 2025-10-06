@@ -105,7 +105,7 @@ gen_ran_angle() {
 default_wallpaper() {
   local angle=$(gen_ran_angle)
   local dur=$(gen_ran_duration)
-  swww img -t wipe --transition-angle $angle --transition-duration $dur ./default.jpg
+  swww img -t wipe --transition-angle $angle --transition-duration $dur ./default.png
 
 }
 
