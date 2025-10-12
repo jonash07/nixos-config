@@ -16,8 +16,6 @@
     yt-dlp
     ripgrep
     neovim
-    libgcc
-    cmake
     qbittorrent
     ntfs3g
     exfat
@@ -46,5 +44,7 @@
     libreoffice
     librsvg
     gnome-icon-theme
+    nettools
+    arp-scan
   ];
 }
