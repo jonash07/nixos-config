@@ -46,5 +46,7 @@
     gnome-icon-theme
     nettools
     arp-scan
+    geteltorito
+    fzf
   ];
 }
