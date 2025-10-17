@@ -48,5 +48,6 @@
     arp-scan
     geteltorito
     fzf
+    flashprog
   ];
 }
