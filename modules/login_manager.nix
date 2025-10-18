@@ -5,7 +5,7 @@
     enable = true;
     settings = {
       default_session = {
-        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --cmd 'hyprland'";
+        command = "${pkgs.tuigreet}/bin/tuigreet --cmd 'hyprland'";
         # user = "greeter";
       };
     };
@@ -19,6 +19,6 @@
   };
 
   environment.systemPackages = with pkgs; [
-    greetd.tuigreet
+    tuigreet
   ];
 }

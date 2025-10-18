@@ -5,5 +5,6 @@
     brightnessctl
     powertop
     lm_sensors
+    btop
   ];
 }
