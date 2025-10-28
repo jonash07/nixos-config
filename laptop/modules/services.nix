@@ -15,7 +15,10 @@
 
   services.devmon.enable = true;
 
-  services.openssh.enable = true;
+  services.openssh = {
+    enable = true;
+    startWhenNeeded = true;
+  };
 
   services.flatpak.enable = true;
 

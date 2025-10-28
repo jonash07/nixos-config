@@ -8,6 +8,7 @@
     ./packages.nix
     ./networking.nix
     ./services.nix
+    ./systemd.nix
     ./users.nix
   ];
 }
