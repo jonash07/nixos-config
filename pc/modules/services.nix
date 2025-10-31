@@ -11,8 +11,6 @@
     jack.enable = true;
   };
 
-  services.devmon.enable = true;
-
   services.openssh.enable = true;
 
 #  services.samba = {

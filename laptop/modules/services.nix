@@ -13,8 +13,6 @@
 
   services.xserver.videoDrivers = [ "modesetting" ];
 
-  services.devmon.enable = true;
-
   services.openssh = {
     enable = true;
     startWhenNeeded = true;
