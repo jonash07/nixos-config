@@ -18,6 +18,8 @@
     startWhenNeeded = true;
   };
 
+  services.udisks2.enable = true;
+
   services.flatpak.enable = true;
 
   services.tlp = {
