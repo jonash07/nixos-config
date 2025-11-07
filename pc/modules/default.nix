@@ -2,7 +2,6 @@
 
 {
   imports = [
-    ./filesystems.nix
     ./graphics.nix
     ./hardware.nix
     ./home_manager.nix
