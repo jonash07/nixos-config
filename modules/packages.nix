@@ -50,5 +50,6 @@
     fzf
     gvfs
     brasero
+    wine-staging
   ];
 }
