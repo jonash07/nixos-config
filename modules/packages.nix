@@ -48,5 +48,7 @@
     arp-scan
     geteltorito
     fzf
+    gvfs
+    brasero
   ];
 }
