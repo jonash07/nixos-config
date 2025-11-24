@@ -33,7 +33,7 @@
       # Set programs that you use
       "$terminal" = "alacritty";
       "$fileManager" = "nemo";
-      "$menu" = "rofi -show drun";
+      "$menu" = "rofi -show drun -drun-display-format {name}";
 
       #################
       ### AUTOSTART ###
