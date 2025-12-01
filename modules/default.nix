@@ -11,7 +11,7 @@
     ./packages.nix
     ./programs.nix
     ./security.nix
-    ./time.nix
+    ./time.nix 
     ./xdg.nix
   ];
 }
