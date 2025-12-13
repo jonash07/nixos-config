@@ -41,6 +41,7 @@
     spotify
     spicetify-cli
     nemo
+    kdePackages.dolphin
     libreoffice
     librsvg
     gnome-icon-theme
@@ -48,8 +49,8 @@
     arp-scan
     geteltorito
     fzf
-    gvfs
     brasero
     wine-staging
+    vscodium
   ];
 }

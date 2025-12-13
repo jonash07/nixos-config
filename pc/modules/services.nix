@@ -1,8 +1,6 @@
 { ... }:
 
 {
-  security.rtkit.enable = true;
-
   services.pipewire = {
     enable = true;
     alsa.enable = true;
@@ -31,10 +29,6 @@
     enable = true;
     videoDrivers = [ "nvidia" ];
   };
-
-  services.udisks2.enable = true;
-
-  services.flatpak.enable = true;
 
 }
 

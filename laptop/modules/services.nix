@@ -1,8 +1,6 @@
 { ... }:
 
 {
-  security.rtkit.enable = true;
-
   services.pipewire = {
     enable = true;
     alsa.enable = true;
@@ -17,10 +15,6 @@
     enable = true;
     startWhenNeeded = true;
   };
-
-  services.udisks2.enable = true;
-
-  services.flatpak.enable = true;
 
   services.tlp = {
     enable = true;
