@@ -6,5 +6,6 @@
   services.flatpak.enable = true;
 
   services.gvfs.enable = true;
+
 }
 

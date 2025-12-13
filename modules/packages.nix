@@ -40,7 +40,6 @@
     discord-canary
     spotify
     spicetify-cli
-    nemo
     kdePackages.dolphin
     libreoffice
     librsvg
