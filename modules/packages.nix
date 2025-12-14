@@ -2,54 +2,64 @@
 
 {
   environment.systemPackages = with pkgs; [
-    wget
-    fastfetch
-    ani-cli
-    kitty
-    gimp 
-    wl-clipboard
-    lshw
+    # Tools 
     ffmpeg-full
     rar
     zip
     unzip
-    yt-dlp
-    ripgrep
-    neovim
-    qbittorrent
-    ntfs3g
-    exfat
-    hyprshot
-    hyprcursor
-    gparted  
-    tree
-    lutris
-    pavucontrol
-    mpv
-    mtpfs
-    playerctl
-    android-tools
-    universal-android-debloater
-    xremap
-    bluetui
-    python314
-    librewolf
-    s-tui
-    stress
-    rose-pine-hyprcursor
-    discord-canary
-    spotify
-    spicetify-cli
-    kdePackages.dolphin
-    libreoffice
-    librsvg
-    gnome-icon-theme
     nettools
     arp-scan
-    geteltorito
+    android-tools
+    playerctl
+    xremap
+
+    # Drivers
+    ntfs3g
+    exfat
+    mtpfs
+
+    # Cli
+    wget 
+    fastfetch 
+    ani-cli 
+    wl-clipboard
+    lshw
+    yt-dlp
+    ripgrep
+    tree
+    stress
+   
+    # Tui
+    neovim
     fzf
-    brasero
-    wine-staging
+    bluetui
+    s-tui
+
+    # Apps
+    kitty
+    gimp
+    qbittorrent
+    gparted
+    lutris
+    pavucontrol
+    librewolf
+    mpv
+    discord-canary
+    libreoffice
     vscodium
+    brasero
+    kdePackages.dolphin
+    spotify
+    # spicetify-cli
+    universal-android-debloater
+
+    # Other
+    hyprshot
+    hyprcursor
+    rose-pine-hyprcursor
+    librsvg
+    gnome-icon-theme
+    wine-staging
+
   ];
 }
