@@ -10,36 +10,15 @@ WALLPAPERS_DIR = f"{WALLPAPER_DIR}/Wallpapers"
 LATEST = f"{WALLPAPER_DIR}/latest.txt"
 
 
-def check_dirs():
-    if os.path.isdir(WALLPAPER_DIR) == False:
-        os.mkdir(WALLPAPER_DIR)
-        os.mkdir(WALLPAPERS_DIR)
-        return False
-
-    if os.path.isdir(WALLPAPERS_DIR) == False:
-        os.mkdir(WALLPAPERS_DIR)
-        return False
-
-    return True
-
-
 def get_wallpapers():
     wallpapers = os.listdir(WALLPAPERS_DIR)
     return wallpapers
 
 
-def check_wallpapers(wallpapers):
-    if len(wallpapers) == 0:
-        return False
-    
-    return True
-
-
 def run_checks():
-    if check_dirs() == False:
-        return False
+    os.makedirs(WALLPAPERS_DIR, exist_ok=True)
 
-    if check_wallpapers(get_wallpapers()) == False:
+    if len(get_wallpapers()) == 0:
         return False
 
     return True
