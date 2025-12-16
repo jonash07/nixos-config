@@ -1,4 +1,3 @@
-import json
 import argparse
 import random
 import subprocess
@@ -91,7 +90,7 @@ def set_wallpaper(wallpaper_path):
         f.write(wallpaper_path)
 
 
-def wallpaper_main(args):
+def main(args):
     if run_checks() == False:
         default_wallpaper()
         return
@@ -133,34 +132,6 @@ def wallpaper_main(args):
 
         set_wallpaper(next_wallpaper)
         return(next_wallpaper)
-
-
-def format_palettes(palette):
-    return
-
-
-def refresh_configs():
-    return
-
-
-def main(args):
-    # Change wallpaper
-    new_wallpaper = wallpaper_main(args)
-
-    return
-
-    # Extract the palette from that wallapper in json
-    palette = pywal(new_wallpaper)
-
-    # Create the palette in multiple formats and put them in the directory
-    format_palettes(palette)
-
-    # Refresh the configs of every program
-    refresh_configs()
-
-    # Grab the prewritten configs and replace the color fields with extracted colors
-
-    # Replace configs in their place
 
 
 if __name__ == "__main__":
