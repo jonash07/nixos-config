@@ -36,7 +36,6 @@
     s-tui
 
     # Apps
-    kitty
     gimp
     qbittorrent
     gparted
