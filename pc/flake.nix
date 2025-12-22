@@ -20,17 +20,12 @@
         specialArgs = { inherit inputs; };
         modules = [
           inputs.home-manager.nixosModules.default
-          ./pc
+          ./configuration.nix
+          ./hardware-configuration.nix
           ./modules
+          ../modules
         ];
       };
-      nixosConfigurations.laptop = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit inputs; };
-        modules = [
-          inputs.home-manager.nixosModules.default
-          ./laptop
-          ./modules
-        ];
-      };
-    };
+   };
 }
+
