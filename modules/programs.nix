@@ -8,5 +8,8 @@
   programs.starship.enable = true;
 
   programs.kdeconnect.enable = true;
+
+  programs.hyprlock.enable = true;
+
 }
 

@@ -34,6 +34,7 @@
       "$terminal" = "alacritty";
       "$fileManager" = "dolphin";
       "$menu" = "rofi -show drun -drun-display-format {name}";
+      "$screenLock" = "hyprlock";
 
       #################
       ### AUTOSTART ###
@@ -42,8 +43,8 @@
       # Autostart necessary processes (like notifications daemons, status bars, etc.)
       # Or execute your favorite apps at launch like this:
      
-      exec-once = "waybar & python3 ~/nixos-config/home_modules/wallscript.py -i";
-      # exec-once = "waybar & ~/nixos-config/home_modules/wallscript.sh 1";
+      # exec-once = "waybar & python3 ~/nixos-config/home_modules/wallscript.py -i";
+      exec-once = "waybar & ~/nixos-config/home_modules/wallscript.sh 1";
         
       #############################
       ### ENVIRONMENT VARIABLES ###
@@ -235,12 +236,15 @@
         "$mainMod SHIFT, Print, exec, hyprshot -m region --clipboard-only"
 
         # Next wallpaper 
-        # "$mainMod, K, exec, ~/nixos-config/home_modules/wallscript.sh 2"
-        "$mainMod, K, exec, python3 ~/nixos-config/home_modules/wallscript.py -n"
+        "$mainMod, K, exec, ~/nixos-config/home_modules/wallscript.sh 2"
+        # "$mainMod, K, exec, python3 ~/nixos-config/home_modules/wallscript.py -n"
 
         # Previous wallpaper 
-        # "$mainMod, L, exec, ~/nixos-config/home_modules/wallscript.sh 3"
-        "$mainMod, L, exec, python3 ~/nixos-config/home_modules/wallscript.py -p"
+        "$mainMod, L, exec, ~/nixos-config/home_modules/wallscript.sh 3"
+        # "$mainMod, L, exec, python3 ~/nixos-config/home_modules/wallscript.py -p"
+
+        # Screen lock
+        "$mainMod, Escape, exec, $screenLock"
       ];
 
       # Move/resize windows with mainMod + LMB/RMB and dragging
@@ -281,9 +285,7 @@
       windowrule = [
         "suppressevent maximize, class:.*"
         # Fix some dragging issues with XWayland
-        "nofocus, class:^$, title:^$, xwayland:1, floating:1, fullscreen:0, pinned:0"
-
-        "tile, initialClass:steam_proton"
+        "nofocus, class:^$, title:^$, xwayland:1, floating:1, fullscreen:0, pinned:0" 
       ];
 
     };
