@@ -244,7 +244,7 @@
         # "$mainMod, L, exec, python3 ~/nixos-config/home_modules/wallscript.py -p"
 
         # Screen lock
-        "$mainMod, Escape, exec, $screenLock"
+        "$mainMod, Escape, exec, $screenLock --grace 30"
       ];
 
       # Move/resize windows with mainMod + LMB/RMB and dragging
