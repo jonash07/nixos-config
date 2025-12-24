@@ -46,11 +46,11 @@
     discord-canary
     libreoffice
     vscodium
-    brasero
     kdePackages.dolphin
     spotify
     # spicetify-cli
     universal-android-debloater
+    qimgv
 
     # Other
     hyprshot
