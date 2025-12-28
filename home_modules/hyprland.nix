@@ -53,8 +53,8 @@
       # See https://wiki.hyprland.org/Configuring/Environment-variables/
       
       env = [
-        "NIXOS_OZONE_WL, 1"
-        "ELECTRON_OZONE_PLATFORM_HINT, wayland"
+        # "NIXOS_OZONE_WL, 1"
+        # "ELECTRON_OZONE_PLATFORM_HINT, wayland"
         "HYPRCURSOR_THEME, rose-pine-hyprcursor"
         "HYPRCURSOR_SIZE, 24"
       ];
