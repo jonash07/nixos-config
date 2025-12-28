@@ -11,7 +11,6 @@
     arp-scan
     android-tools
     playerctl
-    xremap
 
     # Drivers
     ntfs3g
@@ -47,14 +46,10 @@
     vscodium
     kdePackages.dolphin
     spotify
-    # spicetify-cli
     universal-android-debloater
     qimgv
 
     # Other
-    hyprshot
-    hyprcursor
-    rose-pine-hyprcursor
     librsvg
     gnome-icon-theme
     wine-staging

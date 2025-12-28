@@ -7,8 +7,7 @@
 
   services.swww.enable = true;
 
-  services.dunst = {
-    enable = true;
-  };
+  services.dunst.enable = true;
+
 }
 

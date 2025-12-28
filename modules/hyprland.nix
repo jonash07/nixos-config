@@ -19,5 +19,9 @@
   environment.systemPackages = with pkgs; [
     waybar
     rofi
+    hyprshot
+    hyprcursor
+    rose-pine-hyprcursor
   ];
 }
+
