@@ -39,7 +39,6 @@
     gimp
     qbittorrent
     gparted
-    lutris
     pavucontrol
     librewolf
     mpv

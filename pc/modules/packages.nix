@@ -5,5 +5,6 @@
     davinci-resolve
     btop-cuda
     mangohud
+    lutris
   ];
 }
