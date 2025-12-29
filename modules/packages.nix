@@ -55,5 +55,11 @@
     wine-staging
     python314
 
+
+
+
+    xsel
+
+
   ];
 }
