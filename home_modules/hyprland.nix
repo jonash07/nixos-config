@@ -245,6 +245,9 @@
 
         # Screen lock
         "$mainMod, Escape, exec, $screenLock --grace 30"
+
+        # Discord mute button passthrough
+        ", mouse:275, pass, class:^(discord-canary)$"
       ];
 
       # Move/resize windows with mainMod + LMB/RMB and dragging
