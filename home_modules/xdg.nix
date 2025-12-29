@@ -4,7 +4,7 @@
   xdg.desktopEntries = {
     discord-canary = {
       name = "Discord Canary";
-      exec = "DiscordCanary --enable-blink-features=MiddleClickAutoscroll";
+      exec = "NIXOS_OZONE_WL= ELECTRON_OZONE_PLATFORM_HINT= DiscordCanary --enable-blink-features=MiddleClickAutoscroll";
       terminal = false;
     };
   };
