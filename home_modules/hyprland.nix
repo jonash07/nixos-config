@@ -44,11 +44,7 @@
       # Or execute your favorite apps at launch like this:
      
       # exec-once = "waybar & python3 ~/nixos-config/home_modules/wallscript.py -i";
-      exec-once = "
-        waybar && 
-        ~/nixos-config/home_modules/wallscript.sh 1 && 
-        ~/nixos-config/home_modules/mmb.sh
-      ";
+      exec-once = "~/nixos-config/home_modules/exec-once.sh";
         
       #############################
       ### ENVIRONMENT VARIABLES ###
