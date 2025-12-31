@@ -22,6 +22,7 @@
     fastfetch 
     ani-cli 
     wl-clipboard
+    xsel
     lshw
     yt-dlp
     ripgrep
@@ -48,18 +49,13 @@
     spotify
     universal-android-debloater
     qimgv
+    vlc
 
     # Other
     librsvg
     gnome-icon-theme
     wine-staging
     python314
-
-
-
-
-    xsel
-
 
   ];
 }
