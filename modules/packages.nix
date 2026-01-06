@@ -15,7 +15,7 @@
     # Drivers
     ntfs3g
     exfat
-    mtpfs
+    # mtpfs
 
     # Cli
     wget 
