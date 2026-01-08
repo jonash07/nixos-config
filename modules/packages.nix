@@ -50,6 +50,7 @@
     universal-android-debloater
     qimgv
     vlc
+    prismlauncher
 
     # Other
     librsvg
