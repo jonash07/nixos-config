@@ -28,6 +28,7 @@
     ripgrep
     tree
     stress
+    nmap
    
     # Tui
     neovim
@@ -51,6 +52,7 @@
     qimgv
     vlc
     prismlauncher
+    qmmp
 
     # Other
     librsvg
@@ -60,3 +62,4 @@
 
   ];
 }
+
