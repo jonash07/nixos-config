@@ -7,7 +7,7 @@
 
   programs.starship.enable = true;
 
-  programs.kdeconnect.enable = true;
+  programs.localsend.enable = true;
 
   programs.hyprlock.enable = true;
 
