@@ -53,6 +53,7 @@
     vlc
     prismlauncher
     qmmp
+    obs-studio
 
     # Other
     librsvg

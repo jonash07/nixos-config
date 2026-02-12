@@ -248,6 +248,10 @@
 
         # Discord mute button passthrough
         ", mouse:275, pass, class:^(discord-canary)$"
+
+        # OBS clip button passthrough
+        "$mainMod, F1, pass, class:^(com\.obsproject\.Studio)$"
+
       ];
 
       # Move/resize windows with mainMod + LMB/RMB and dragging
