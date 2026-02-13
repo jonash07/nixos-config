@@ -54,6 +54,7 @@
     prismlauncher
     qmmp
     obs-studio
+    logseq
 
     # Other
     librsvg
