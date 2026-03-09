@@ -55,6 +55,7 @@
     qmmp
     obs-studio
     logseq
+    handbrake
 
     # Other
     librsvg
