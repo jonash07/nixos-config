@@ -33,7 +33,6 @@
     # Tui
     neovim
     fzf
-    bluetui
     s-tui
 
     # Apps
@@ -56,7 +55,8 @@
     obs-studio
     logseq
     handbrake
-
+    overskride
+  
     # Other
     librsvg
     gnome-icon-theme
