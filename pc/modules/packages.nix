@@ -2,7 +2,7 @@
 
 {
   environment.systemPackages = with pkgs; [
-    davinci-resolve
+    kdePackages.kdenlive
     btop-cuda
     mangohud
     lutris
