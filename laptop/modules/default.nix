@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ./display_manager.nix
     ./environment.nix
     ./graphics.nix
     ./hardware.nix
@@ -12,3 +13,4 @@
     ./users.nix
   ];
 }
+
