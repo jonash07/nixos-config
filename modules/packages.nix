@@ -60,7 +60,6 @@
     # Other
     librsvg
     gnome-icon-theme
-    wine-staging
     python3
 
   ];

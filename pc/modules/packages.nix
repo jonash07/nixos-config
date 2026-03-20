@@ -6,6 +6,7 @@
     btop-cuda
     mangohud
     lutris
+    wine
   ];
 
 }
