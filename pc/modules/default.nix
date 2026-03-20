@@ -11,7 +11,7 @@
     ./networking.nix
     ./services.nix
     ./users.nix
-    # ./virtualisation.nix
+    ./virtualisation.nix
   ];
 }
 

@@ -11,20 +11,6 @@
 
   services.openssh.enable = true;
 
-#  services.samba = {
-#    enable = true;
-#    openFirewall = true;
-#    nmbd.enable = false;
-#    settings = {
-#      Share = {
-#        browseable = "yes";
-#        comment = "Shared folder";
-#        path = "/home/jim/VM_Shared";
-#        writable = "yes";
-#      };
-#    };
-#  };
-
   services.xserver = {
     enable = true;
     videoDrivers = [ "nvidia" ];
