@@ -61,6 +61,7 @@
     librsvg
     gnome-icon-theme
     python3
+    aseprite
 
   ];
 }
