@@ -46,6 +46,7 @@
     libreoffice
     vscodium
     kdePackages.dolphin
+    kdePackages.k3b
     spotify
     universal-android-debloater
     qimgv
