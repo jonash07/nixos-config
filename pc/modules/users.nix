@@ -3,7 +3,8 @@
 {
   users.users.jim = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "libvirtd" "cdrom" ];
+    extraGroups = [ "wheel" "libvirtd" ];
   };
+  
 }
 

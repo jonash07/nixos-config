@@ -3,7 +3,8 @@
 {
   users.users.alice = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "networkmanager" "cdrom" ];
+    extraGroups = [ "wheel" "networkmanager" ];
   };
+
 }
 

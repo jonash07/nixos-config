@@ -46,7 +46,6 @@
     libreoffice
     vscodium
     kdePackages.dolphin
-    kdePackages.k3b
     spotify
     universal-android-debloater
     qimgv
@@ -57,12 +56,12 @@
     logseq
     handbrake
     overskride
-  
+    aseprite
+
     # Other
     librsvg
     gnome-icon-theme
     python3
-    aseprite
 
   ];
 }
