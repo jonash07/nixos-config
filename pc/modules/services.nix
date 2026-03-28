@@ -16,5 +16,7 @@
     videoDrivers = [ "nvidia" ];
   };
 
+  services.logmein-hamachi.enable = true;
+
 }
 

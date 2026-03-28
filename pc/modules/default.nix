@@ -8,6 +8,7 @@
     ./hardware.nix
     ./home_manager.nix
     ./packages.nix
+    ./programs.nix
     ./networking.nix
     ./services.nix
     ./users.nix
