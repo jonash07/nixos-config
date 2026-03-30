@@ -29,6 +29,7 @@
     tree
     stress
     nmap
+    steam-run
    
     # Tui
     neovim
