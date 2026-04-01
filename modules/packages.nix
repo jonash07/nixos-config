@@ -33,6 +33,7 @@
     steam-run
    
     # Tui
+    vim
     neovim
     fzf
     s-tui

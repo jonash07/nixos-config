@@ -42,8 +42,7 @@
       
       # Autostart necessary processes (like notifications daemons, status bars, etc.)
       # Or execute your favorite apps at launch like this:
-     
-      # exec-once = "waybar & python3 ~/nixos-config/home_modules/wallscript.py -i";
+      
       exec-once = "~/nixos-config/home_modules/exec-once.sh";
         
       #############################
@@ -237,11 +236,9 @@
 
         # Next wallpaper 
         "$mainMod, K, exec, ~/nixos-config/home_modules/wallscript.sh 2"
-        # "$mainMod, K, exec, python3 ~/nixos-config/home_modules/wallscript.py -n"
 
         # Previous wallpaper 
         "$mainMod, L, exec, ~/nixos-config/home_modules/wallscript.sh 3"
-        # "$mainMod, L, exec, python3 ~/nixos-config/home_modules/wallscript.py -p"
 
         # Screen lock
         "$mainMod, Escape, exec, $screenLock --grace 30"
