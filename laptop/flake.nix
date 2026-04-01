@@ -7,7 +7,9 @@
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
+
     };
+
   };
 
   outputs = { self, nixpkgs, ... }@inputs:
@@ -23,8 +25,12 @@
           ./hardware-configuration.nix
           ./modules
           ../modules
+
         ];
+
       };
+
     };
+
 }
 

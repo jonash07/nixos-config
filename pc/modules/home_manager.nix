@@ -5,6 +5,10 @@
     extraSpecialArgs = { inherit inputs; };
     users = {
       "jim" = import ./../home.nix;
+
     };
+
   };
+
 }
+

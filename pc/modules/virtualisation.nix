@@ -3,6 +3,7 @@
 {
   virtualisation.libvirtd = {
     enable = true;
+
   };
 
   networking.iproute2.enable = true;
@@ -17,11 +18,13 @@
     libguestfs
     libvirt
     dnsmasq
+
   ];
 
   services.samba-wsdd = {
     enable = true;
     openFirewall = true;
+
   };
 
   services.samba = {
@@ -37,8 +40,11 @@
         public = "yes";
         "create mask" = "0757";
         "directory mask" = "0757";
+
       };
+
     };
+
   };
 
 }

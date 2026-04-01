@@ -3,6 +3,7 @@
 {
   programs.alacritty = {
     enable = true;
+
   };
 
 }

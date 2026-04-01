@@ -2,5 +2,6 @@
 
 {
   programs.haguichi.enable = true;
+
 }
 

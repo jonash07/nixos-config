@@ -11,6 +11,7 @@
     arp-scan
     android-tools
     playerctl
+    brightnessctl
 
     # Drivers
     ntfs3g
@@ -65,5 +66,6 @@
     python3
 
   ];
+
 }
 

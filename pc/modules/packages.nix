@@ -7,6 +7,7 @@
     mangohud
     lutris
     wine
+
   ];
 
 }

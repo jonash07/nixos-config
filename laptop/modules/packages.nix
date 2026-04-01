@@ -1,10 +1,12 @@
 { pkgs, ... }:
 
 {
-  environment.systemPackages = with pkgs; [
-    brightnessctl
+  environment.systemPackages = with pkgs; [ 
     powertop
     lm_sensors
     btop
+
   ];
+
 }
+
