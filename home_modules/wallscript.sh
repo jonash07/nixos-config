@@ -105,7 +105,7 @@ gen_ran_angle() {
 default_wallpaper() {
   local angle=$(gen_ran_angle)
   local dur=$(gen_ran_duration)
-  swww img -t wipe --transition-angle $angle --transition-duration $dur ./default.png
+  awww img -t wipe --transition-angle $angle --transition-duration $dur ./default.png
 
 }
 
@@ -113,7 +113,7 @@ default_wallpaper() {
 apply_wallpaper() {
   local angle=$(gen_ran_angle)
   local dur=$(gen_ran_duration)
-  swww img -t wipe --transition-angle $angle --transition-duration $dur ~/Wallpaper/Wallpapers/$1
+  awww img -t wipe --transition-angle $angle --transition-duration $dur ~/Wallpaper/Wallpapers/$1
   echo $1 > ~/Wallpaper/latest.txt
 
 }
