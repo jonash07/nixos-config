@@ -10,9 +10,15 @@
 
     };
 
+    nvf = {
+      url = "github:notashelf/nvf";
+      inputs.nixpkgs.follows = "nixpkgs";
+
+    };
+
   };
 
-  outputs = { self, nixpkgs, ... }@inputs:
+  outputs = { self, nixpkgs, nvf, ... }@inputs:
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
@@ -22,6 +28,7 @@
         specialArgs = { inherit inputs; };
         modules = [
           inputs.home-manager.nixosModules.default
+          nvf.nixosModules.default
           ./hardware-configuration.nix
           ./modules
           ../modules

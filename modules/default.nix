@@ -7,6 +7,7 @@
     ./environment.nix
     ./fonts.nix
     ./nix_settings.nix
+    ./nvf.nix
     ./packages.nix
     ./programs.nix
     ./security.nix
