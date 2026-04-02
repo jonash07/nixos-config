@@ -27,6 +27,7 @@
         telescope.enable = true;
         autocomplete.nvim-cmp.enable = true;
         git.enable = true;
+        lsp.enable = true;
 
       };
 
