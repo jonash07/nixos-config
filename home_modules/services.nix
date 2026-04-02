@@ -6,7 +6,7 @@
 
   };
 
-  services.awww = {
+  services.swww = {
     enable = true;
 
   };
