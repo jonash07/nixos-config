@@ -16,7 +16,6 @@
     # Drivers
     ntfs3g
     exfat
-    mtpfs
 
     # Cli
     wget 
@@ -33,6 +32,7 @@
     steam-run
    
     # Tui
+    vim
     fzf
     s-tui
 

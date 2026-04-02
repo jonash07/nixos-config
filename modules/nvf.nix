@@ -21,6 +21,7 @@
 
         };
 
+        vimAlias = false;
         filetree.nvimTree.enable = true;
         ui.colorizer.enable = true;
         statusline.lualine.enable = true;
