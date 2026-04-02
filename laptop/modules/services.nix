@@ -10,8 +10,6 @@
 
   };
 
-  services.xserver.videoDrivers = [ "modesetting" ];
-
   services.openssh = {
     enable = true;
     startWhenNeeded = true;

@@ -1,6 +1,8 @@
 { pkgs, ... }:
 
 {
+  services.xserver.videoDrivers = [ "modesetting" ];
+
   hardware.graphics = {
     enable = true;
     enable32Bit = true;

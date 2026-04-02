@@ -39,6 +39,7 @@
     s-tui
 
     # Apps
+    alacritty
     gimp
     qbittorrent
     gparted
