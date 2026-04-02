@@ -230,8 +230,8 @@
         "$mainMod, mouse_up, workspace, e-1"
 
         # Printscreen utility
-        ", Print, exec, hyprshot -m window --clipboard-only"
-        "$mainMod, Print, exec, hyprshot -m output --clipboard-only"
+        ", Print, exec, hyprshot -m output --clipboard-only"
+        "$mainMod, Print, exec, hyprshot -m window --clipboard-only"
         "$mainMod SHIFT, Print, exec, hyprshot -m region --clipboard-only"
 
         # Next wallpaper 
