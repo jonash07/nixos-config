@@ -7,7 +7,8 @@
   };
 
   environment.shellAliases = {
-    ncg = "sudo nix-collect-garbage --delete-older-than 1d";
+    sncg = "sudo nix-collect-garbage --delete-older-than 1d";
+    ncg = "nix-collect-garbage --delete-older-than 1d";
 
   };
 
