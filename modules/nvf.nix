@@ -23,12 +23,24 @@
 
         vimAlias = false;
         filetree.nvimTree.enable = true;
-        ui.colorizer.enable = true;
         statusline.lualine.enable = true;
         telescope.enable = true;
         autocomplete.nvim-cmp.enable = true;
         git.enable = true;
         lsp.enable = true;
+
+        ui.colorizer = {
+          enable = true;
+          setupOpts = {
+            filetypes."*" = {};
+            user_default_options = {
+              names = false;
+
+            };
+
+          };
+
+        };
 
       };
 
