@@ -8,10 +8,7 @@
 
   };
 
-  programs.uwsm = {
-    enable = true;
-
-  };
+  programs.uwsm.enable = true;
 
   environment.systemPackages = with pkgs; [
     waybar

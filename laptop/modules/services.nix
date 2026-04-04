@@ -21,8 +21,8 @@
       settings = {
         START_CHARGE_THRESH_BAT0 = 70;
       	STOP_CHARGE_THRESH_BAT0 = 90;
-	      START_CHARGE_THRESH_BAT1 = 70;
-	      STOP_CHARGE_THRESH_BAT1 = 90;
+        START_CHARGE_THRESH_BAT1 = 70;
+        STOP_CHARGE_THRESH_BAT1 = 90;
 
       };
 

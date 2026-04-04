@@ -65,8 +65,6 @@
     gnome-icon-theme
     python3
 
-    awww
-
   ];
 
 }

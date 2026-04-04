@@ -5,11 +5,7 @@
     sddm = {
       enable = true;
       theme = "catppuccin-mocha-mauve";
-
-      wayland = {
-        enable = true;
-    
-      };
+      wayland.enable = true;
 
     };
 
@@ -22,6 +18,7 @@
     font = "Mononoki Nerd Font";
     fontSize = "16";
    })
+
   ];
 
 }
