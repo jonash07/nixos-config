@@ -32,7 +32,7 @@
       
       # Set programs that you use
       "$terminal" = "alacritty";
-      "$fileManager" = "dolphin";
+      "$fileManager" = "nemo";
       "$screenLock" = "hyprlock";
       # "$menu" = "rofi -show drun -drun-display-format {name}";
 

@@ -7,6 +7,7 @@
     rar
     zip
     unzip
+    p7zip
     nettools
     arp-scan
     android-tools
@@ -43,11 +44,12 @@
     gparted
     pavucontrol
     librewolf
+    ungoogled-chromium
     mpv
     discord-canary
     libreoffice
     vscodium
-    kdePackages.dolphin
+    nemo
     spotify
     universal-android-debloater
     qimgv
