@@ -44,7 +44,6 @@
     gparted
     pavucontrol
     librewolf
-    ungoogled-chromium
     mpv
     discord-canary
     libreoffice
