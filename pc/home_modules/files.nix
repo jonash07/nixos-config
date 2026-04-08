@@ -4,11 +4,11 @@
   home.file.".config/.mischypr/misc.conf" = {
     enable = true;
     text = ''
-device {
-  name=epic-mouse-v1
-  sensitivity=-0.700000
-}
+#############
+### INPUT ###
+#############
 
+# https://wiki.hypr.land/Configuring/Variables/#input
 input {
   touchpad {
     natural_scroll=false
@@ -22,6 +22,19 @@ input {
   sensitivity=-0.700000
 }
 
+# See https://wiki.hypr.land/Configuring/Gestures
+# gesture = 3, horizontal, workspace
+
+device {
+  name=epic-mouse-v1
+  sensitivity=-0.700000
+}
+
+################
+### MONITORS ###
+################
+
+# See https://wiki.hypr.land/Configuring/Monitors/
 monitor=DP-1, 2560x1440@165, 0x0, 1
 monitor=DP-2, 1920x1080@144, 2560x160, 1
     '';
