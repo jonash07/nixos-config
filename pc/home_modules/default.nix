@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ./hyprland.nix
+    ./files.nix
 
   ];
 
