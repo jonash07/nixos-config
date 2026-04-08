@@ -1,7 +1,7 @@
 { ... }:
 
 {
-  home.file.".config/mischypr/misc.conf" = {
+  home.file.".config/.mischypr/misc.conf" = {
     enable = true;
     text = ''
 device {
