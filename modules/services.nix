@@ -6,6 +6,8 @@
   services.flatpak.enable = true;
 
   services.gvfs.enable = true;
-  
+
+  services.hypridle.enable = true;
+
 }
 
