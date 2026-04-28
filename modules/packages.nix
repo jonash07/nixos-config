@@ -43,7 +43,6 @@
     qbittorrent
     gparted
     pavucontrol
-    librewolf
     mpv
     discord-canary
     libreoffice
@@ -59,6 +58,7 @@
     handbrake
     overskride
     aseprite
+    ungoogled-chromium
 
     # Other
     librsvg
