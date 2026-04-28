@@ -54,7 +54,6 @@
     qimgv
     vlc
     prismlauncher
-    qmmp
     obs-studio
     logseq
     handbrake

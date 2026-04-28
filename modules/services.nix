@@ -1,13 +1,18 @@
 { ... }:
 
 {
-  services.udisks2.enable = true;  
+  services = {
+    udisks2.enable = true;  
 
-  services.flatpak.enable = true;
+    flatpak.enable = true;
 
-  services.gvfs.enable = true;
+    gvfs.enable = true;
 
-  services.hypridle.enable = true;
+    hypridle.enable = true;
+
+    hardware.openrgb.enable = true;
+
+  };
 
 }
 

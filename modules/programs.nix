@@ -1,15 +1,18 @@
 { ... }:
 
 {
-  programs.git.enable = true;
+  programs = {
+    git.enable = true;
 
-  programs.steam.enable = true;
+    steam.enable = true;
 
-  programs.starship.enable = true;
+    starship.enable = true;
 
-  programs.localsend.enable = true;
+    localsend.enable = true;
 
-  programs.hyprlock.enable = true;
+    hyprlock.enable = true;
+
+  };
 
 }
 
