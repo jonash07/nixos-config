@@ -44,7 +44,7 @@
     gparted
     pavucontrol
     mpv
-    discord-canary
+    discord
     libreoffice
     vscodium
     nemo
@@ -56,8 +56,7 @@
     obs-studio
     logseq
     handbrake
-    overskride
-    aseprite
+    blueman
     ungoogled-chromium
 
     # Other
