@@ -5,7 +5,7 @@
     kdePackages.kdenlive
     btop-cuda
     mangohud
-    lutris
+    #lutris
     wine
     aseprite
 

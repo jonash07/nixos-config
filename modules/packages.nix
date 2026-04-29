@@ -57,7 +57,7 @@
     logseq
     handbrake
     blueman
-    ungoogled-chromium
+    chromium
 
     # Other
     librsvg
