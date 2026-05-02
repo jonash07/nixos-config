@@ -39,6 +39,7 @@
 
     # Apps
     alacritty
+    kitty
     gimp
     qbittorrent
     gparted
@@ -58,6 +59,7 @@
     handbrake
     blueman
     chromium
+    rmpc
 
     # Other
     librsvg

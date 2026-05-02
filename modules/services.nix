@@ -10,7 +10,7 @@
 
     hypridle.enable = true;
 
-    hardware.openrgb.enable = true;
+    mpd.enable = true;
 
   };
 
