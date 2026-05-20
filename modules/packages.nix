@@ -19,6 +19,7 @@
     exfat
 
     # Cli
+    starship
     wget 
     fastfetch 
     ani-cli 
