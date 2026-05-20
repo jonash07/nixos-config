@@ -9,12 +9,12 @@
 ------------------
 
 -- See https://wiki.hypr.land/Configuring/Basics/Monitors/
--- hl.monitor({
---     output   = "eDP-1",
---     mode     = "1920x1080@60",
---     position = "0x0",
---     scale    = "1",
--- })
+hl.monitor({
+    output   = "eDP-1",
+    mode     = "1920x1080@60",
+    position = "0x0",
+    scale    = "1",
+})
 
 
 ---------------
@@ -46,8 +46,8 @@ hl.gesture({
     action = "workspace"
 })
 
-Example per-device config
-See https://wiki.hypr.land/Configuring/Advanced-and-Cool/Devices/ for more
+-- Example per-device config
+-- See https://wiki.hypr.land/Configuring/Advanced-and-Cool/Devices/ for more
 hl.device({
     name        = "epic-mouse-v1",
     sensitivity = -0.5,
