@@ -6,7 +6,7 @@
     btop-cuda
     mangohud
     #lutris
-    wine
+    wine-staging
     aseprite
 
   ];
