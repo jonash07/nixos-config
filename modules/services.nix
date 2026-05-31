@@ -10,8 +10,6 @@
 
     hypridle.enable = true;
 
-    mpd.enable = true;
-
   };
 
 }

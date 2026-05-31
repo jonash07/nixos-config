@@ -60,7 +60,6 @@
     handbrake
     blueman
     chromium
-    rmpc
 
     # Other
     librsvg
