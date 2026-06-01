@@ -41,25 +41,26 @@
     # Apps
     alacritty
     kitty
+    mpv
+    vlc
+    nemo
+    qimgv
     gimp
+    chromium
     qbittorrent
     gparted
     pavucontrol
-    mpv
-    discord
     libreoffice
     vscodium
-    nemo
     spotify
     universal-android-debloater
-    qimgv
-    vlc
     prismlauncher
     obs-studio
     logseq
     handbrake
     blueman
-    chromium
+    discord
+    vesktop
 
     # Other
     librsvg
