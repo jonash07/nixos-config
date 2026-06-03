@@ -43,7 +43,6 @@
     kitty
     mpv
     vlc
-    nemo
     qimgv
     gimp
     chromium
@@ -59,8 +58,6 @@
     logseq
     handbrake
     blueman
-    discord
-    vesktop
 
     # Other
     librsvg

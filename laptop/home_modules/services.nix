@@ -1,8 +1,10 @@
 { ... }:
 
 {
-  services.syncthing = {
-    enable = true;
+  services = {
+    udiskie.enable = true;
+
+    syncthing.enable = true;
 
   };
 

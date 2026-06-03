@@ -8,8 +8,6 @@
 
     localsend.enable = true;
 
-    hyprlock.enable = true;
-
   };
 
 }

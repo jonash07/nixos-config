@@ -3,7 +3,6 @@
 {
   imports = [
     ./boot.nix
-    ./desktop_environment.nix
     ./environment.nix
     ./fonts.nix
     ./nix_settings.nix

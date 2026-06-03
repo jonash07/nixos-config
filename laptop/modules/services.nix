@@ -2,21 +2,6 @@
 
 {
   services = {
-    pipewire = {
-      enable = true;
-      alsa.enable = true;
-      alsa.support32Bit = true;
-      pulse.enable = true;
-      jack.enable = true;
-
-    };
-
-    openssh = {
-      enable = true;
-      startWhenNeeded = true;
-
-    };
-
     tlp = {
       enable = true;
       settings = {
@@ -39,6 +24,8 @@
       turbo = 0;
 
     };
+
+  udisks2.enable = true;
 
   };
 
