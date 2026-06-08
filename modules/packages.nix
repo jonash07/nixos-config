@@ -40,7 +40,6 @@
 
     # Apps
     alacritty
-    kitty
     mpv
     vlc
     qimgv
