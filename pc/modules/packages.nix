@@ -8,7 +8,6 @@
     #lutris
     wine-staging
     aseprite
-    vesktop
     deadlock-mod-manager
 
   ];

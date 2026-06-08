@@ -58,6 +58,9 @@
     logseq
     handbrake
     blueman
+    protontricks
+    discord
+    vesktop
 
     # Other
     librsvg

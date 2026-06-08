@@ -5,7 +5,6 @@
     powertop
     lm_sensors
     btop
-    discord
 
   ];
 
