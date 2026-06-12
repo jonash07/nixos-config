@@ -58,7 +58,7 @@
     handbrake
     blueman
     protontricks
-    discord
+    discord-canary
     vesktop
 
     # Other
