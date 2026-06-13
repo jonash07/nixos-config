@@ -5,8 +5,6 @@
     kdePackages.kdenlive
     btop-cuda
     mangohud
-    #lutris
-    wine-staging
     aseprite
     deadlock-mod-manager
 
