@@ -1,7 +1,7 @@
 { ... }:
 
 {
-  programs.haguichi.enable = true;
+  # programs.haguichi.enable = true;
 
 }
 

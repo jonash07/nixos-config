@@ -5,6 +5,7 @@
     powertop
     lm_sensors
     btop
+    blueman
 
   ];
 

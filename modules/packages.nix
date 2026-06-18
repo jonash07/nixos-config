@@ -56,7 +56,6 @@
     obs-studio
     logseq
     handbrake
-    blueman
     protontricks
     discord-canary
     vesktop
