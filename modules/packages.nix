@@ -57,7 +57,7 @@
     logseq
     handbrake
     protontricks
-    discord-canary
+    discord
     vesktop
 
     # Other
