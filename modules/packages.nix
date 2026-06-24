@@ -54,7 +54,6 @@
     universal-android-debloater
     prismlauncher
     obs-studio
-    logseq
     handbrake
     protontricks
     discord
