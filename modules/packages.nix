@@ -32,7 +32,8 @@
     stress
     nmap
     steam-run
-   
+    rivalcfg
+
     # Tui
     vim
     fzf
@@ -56,8 +57,6 @@
     obs-studio
     handbrake
     protontricks
-    discord
-    vesktop
 
     # Other
     librsvg
