@@ -12,7 +12,6 @@
     arp-scan
     android-tools
     playerctl
-    brightnessctl
 
     # Drivers
     ntfs3g
@@ -48,7 +47,6 @@
     chromium
     qbittorrent
     gparted
-    pavucontrol
     libreoffice
     vscodium
     spotify

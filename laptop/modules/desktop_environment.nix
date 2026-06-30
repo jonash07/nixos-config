@@ -20,6 +20,7 @@
     mako
     nemo
     awww
+    pavucontrol
     hyprshot
     hyprcursor
     rose-pine-hyprcursor

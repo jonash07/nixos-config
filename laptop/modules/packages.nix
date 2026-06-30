@@ -6,6 +6,7 @@
     lm_sensors
     btop
     blueman
+    brightnessctl
 
   ];
 
