@@ -2,8 +2,6 @@
 
 {
   environment.systemPackages = with pkgs; [ 
-    powertop
-    lm_sensors
     btop
     blueman
     brightnessctl

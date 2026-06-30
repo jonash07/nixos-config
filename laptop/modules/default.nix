@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ./desktop_environment.nix
+    ./desktop.nix
     ./display_manager.nix
     ./environment.nix
     ./graphics.nix

@@ -28,7 +28,6 @@
     yt-dlp
     ripgrep
     tree
-    stress
     nmap
     steam-run
     rivalcfg
