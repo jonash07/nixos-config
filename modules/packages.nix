@@ -43,12 +43,14 @@
     vlc
     qimgv
     gimp
+    librewolf
     chromium
     qbittorrent
     gparted
     libreoffice
     vscodium
     spotify
+    feishin
     universal-android-debloater
     prismlauncher
     obs-studio

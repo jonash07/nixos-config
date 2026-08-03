@@ -21,6 +21,7 @@
     nemo
     awww
     pavucontrol
+    hyprpolkitagent
     hyprshot
     hyprcursor
     rose-pine-hyprcursor

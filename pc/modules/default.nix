@@ -7,7 +7,6 @@
     ./environment.nix
     ./graphics.nix
     ./hardware.nix
-    ./home_manager.nix
     ./networking.nix
     ./packages.nix
     ./programs.nix

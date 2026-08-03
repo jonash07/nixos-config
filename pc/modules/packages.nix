@@ -6,6 +6,7 @@
     mangohud
     aseprite
     deadlock-mod-manager
+    lutris
 
   ];
 

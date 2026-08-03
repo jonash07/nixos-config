@@ -5,6 +5,7 @@
     btop
     blueman
     brightnessctl
+    udiskie
 
   ];
 
