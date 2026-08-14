@@ -6,6 +6,7 @@
     blueman
     brightnessctl
     udiskie
+    quickshell
 
   ];
 
