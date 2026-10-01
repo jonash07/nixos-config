@@ -10,6 +10,16 @@
       ];
     };
 
+    firewall = {
+      allowedUDPPorts = [
+        8080
+      ];
+      
+      allowedTCPPorts = [
+        8080
+      ];
+    };
+
   };
 
 }

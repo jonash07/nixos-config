@@ -53,9 +53,9 @@
     feishin
     universal-android-debloater
     prismlauncher
-    obs-studio
     handbrake
     protontricks
+    broadcast-box
 
     # Other
     librsvg
