@@ -12,6 +12,7 @@
     arp-scan
     android-tools
     playerctl
+    quickshell
 
     # Drivers
     ntfs3g
@@ -48,13 +49,14 @@
     qbittorrent
     gparted
     libreoffice
-    vscodium
+    vscodium.fhs
     spotify
     feishin
     universal-android-debloater
     prismlauncher
     handbrake
     protontricks
+    logseq
     broadcast-box
 
     # Other

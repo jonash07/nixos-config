@@ -1,32 +1,18 @@
 { pkgs, ... }:
 
 {
-  programs.hyprland = {
-    enable = true;
-    xwayland.enable = true;
-    withUWSM = true;
+  services.desktopManager.plasma6.enable = true;
 
-  };
-
-  programs.uwsm.enable = true;
-
-  programs.hyprlock.enable = true;
-
-  services.hypridle.enable = true;
-
-  environment.systemPackages = with pkgs; [
-    waybar
-    rofi
-    mako
-    nemo
-    awww
-    pavucontrol
-    hyprpolkitagent
-    hyprshot
-    hyprcursor
-    rose-pine-hyprcursor
+  environment.plasma6.excludePackages = with pkgs.kdePackages; [
+    kate
+    konsole
+    gwenview
+    okular
+    qrca
 
   ];
+
+  services.power-profiles-daemon.enable = false;
 
 }
 
