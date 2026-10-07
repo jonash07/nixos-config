@@ -49,7 +49,7 @@
     qbittorrent
     gparted
     libreoffice
-    vscodium.fhs
+    vscode.fhs
     spotify
     feishin
     universal-android-debloater
@@ -61,7 +61,6 @@
 
     # Other
     librsvg
-    gnome-icon-theme
     python3
 
   ];
